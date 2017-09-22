@@ -1,0 +1,167 @@
+02-14-2017 @ 11:57:40 - customers request: Array
+(
+    [email] => me@danielhart.co
+    [description] => Daniel Hart
+)
+
+02-14-2017 @ 11:57:41 - customers/cus_A7OP9wDoAocijA/sources request: Array
+(
+    [source] => tok_19n9cUB2LBGeESVAW3Tl7mlU
+)
+
+02-14-2017 @ 11:57:41 - customers/cus_A7OP9wDoAocijA request: Array
+(
+    [default_source] => card_19n9cUB2LBGeESVAaXH4Fptq
+)
+
+02-14-2017 @ 11:57:42 - Info: Begin processing payment for order 156 for the amount of 15
+02-14-2017 @ 11:57:42 - charges request: Array
+(
+    [currency] => usd
+    [amount] => 1500
+    [description] => Natural Music - Order 156
+    [capture] => true
+    [expand[]] => balance_transaction
+    [customer] => cus_A7OP9wDoAocijA
+    [source] => card_19n9cUB2LBGeESVAaXH4Fptq
+)
+
+02-14-2017 @ 11:57:43 - Processing response: stdClass Object
+(
+    [id] => ch_19n9cYB2LBGeESVAM3i18nlE
+    [object] => charge
+    [amount] => 1500
+    [amount_refunded] => 0
+    [application] => 
+    [application_fee] => 
+    [balance_transaction] => stdClass Object
+        (
+            [id] => txn_19n9cYB2LBGeESVA2EN7L18k
+            [object] => balance_transaction
+            [amount] => 1500
+            [available_on] => 1487635200
+            [created] => 1487091462
+            [currency] => usd
+            [description] => Natural Music - Order 156
+            [fee] => 74
+            [fee_details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [amount] => 74
+                            [application] => 
+                            [currency] => usd
+                            [description] => Stripe processing fees
+                            [type] => stripe_fee
+                        )
+
+                )
+
+            [net] => 1426
+            [source] => ch_19n9cYB2LBGeESVAM3i18nlE
+            [sourced_transfers] => stdClass Object
+                (
+                    [object] => list
+                    [data] => Array
+                        (
+                        )
+
+                    [has_more] => 
+                    [total_count] => 0
+                    [url] => /v1/transfers?source_transaction=ch_19n9cYB2LBGeESVAM3i18nlE
+                )
+
+            [status] => pending
+            [type] => charge
+        )
+
+    [captured] => 1
+    [created] => 1487091462
+    [currency] => usd
+    [customer] => cus_A7OP9wDoAocijA
+    [description] => Natural Music - Order 156
+    [destination] => 
+    [dispute] => 
+    [failure_code] => 
+    [failure_message] => 
+    [fraud_details] => stdClass Object
+        (
+        )
+
+    [invoice] => 
+    [livemode] => 
+    [metadata] => stdClass Object
+        (
+        )
+
+    [on_behalf_of] => 
+    [order] => 
+    [outcome] => stdClass Object
+        (
+            [network_status] => approved_by_network
+            [reason] => 
+            [risk_level] => normal
+            [seller_message] => Payment complete.
+            [type] => authorized
+        )
+
+    [paid] => 1
+    [receipt_email] => 
+    [receipt_number] => 
+    [refunded] => 
+    [refunds] => stdClass Object
+        (
+            [object] => list
+            [data] => Array
+                (
+                )
+
+            [has_more] => 
+            [total_count] => 0
+            [url] => /v1/charges/ch_19n9cYB2LBGeESVAM3i18nlE/refunds
+        )
+
+    [review] => 
+    [shipping] => 
+    [source] => stdClass Object
+        (
+            [id] => card_19n9cUB2LBGeESVAaXH4Fptq
+            [object] => card
+            [address_city] => Peoria
+            [address_country] => US
+            [address_line1] => 604 W Main St
+            [address_line1_check] => pass
+            [address_line2] => Apt 2
+            [address_state] => IL
+            [address_zip] => 61606
+            [address_zip_check] => pass
+            [brand] => Visa
+            [country] => US
+            [customer] => cus_A7OP9wDoAocijA
+            [cvc_check] => pass
+            [dynamic_last4] => 
+            [exp_month] => 5
+            [exp_year] => 2019
+            [fingerprint] => vesUQsZmRgiPbzcG
+            [funding] => credit
+            [last4] => 4242
+            [metadata] => stdClass Object
+                (
+                )
+
+            [name] => Daniel Hart
+            [tokenization_method] => 
+        )
+
+    [source_transfer] => 
+    [statement_descriptor] => 
+    [status] => succeeded
+    [transfer_group] => 
+)
+
+02-14-2017 @ 11:57:43 - Success: Stripe charge complete (Charge ID: ch_19n9cYB2LBGeESVAM3i18nlE)
+02-14-2017 @ 11:57:57 - customers/cus_A7OP9wDoAocijA/sources request: Array
+(
+    [limit] => 100
+)
+
