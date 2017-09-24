@@ -87,49 +87,14 @@
 
       <div id="banner">
           <div class="banner-info">
-            <h2>START LEARNING<br/>GOSPEL PIANO TODAY!</h2>
-            <p>Take your piano playing to the next level by receiving <br/>Natural Music’s piano video lessons right on your computer, tablet, or phone.</p>
+            <h2><?php bloginfo('name'); ?></h2>
+            <p>Test</p>
             <a class="btn" href="<?php bloginfo(url);?>/courses-overview/">Get Started</a>
           </div>
           <div class="banner-info">
-            <script type="text/javascript">
-    var embedCode = '<iframe width="590" height="332" src="https://www.youtube.com/embed/pydQC0K2ZPw?rel=0&autoplay=1&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>'
-            </script>
-            <div id="videocontainer" class="videoWrapper">
-              <img src="<?php bloginfo(template_url);?>/images/homevideo.png" onclick="document.getElementById('videocontainer').innerHTML = embedCode;"/>
-            </div>
-            <a class="btn" onclick="document.getElementById('videocontainer').innerHTML = embedCode;">Watch Video</a>
           </div>
       </div>
 
-      <div id="homesection">
-      <h2 align="center">Here's How It Works</h2>
-      <div id="homesection-wrapper">
-        <div class="sec">
-          <h2><i class="fa fa-th-list" aria-hidden="true"></i></h2>
-          <p>We break down each video lesson into easy to learn sections</p>
-        </div>
-        <div class="sec">
-          <h2><i class="fa fa-file-text" aria-hidden="true"></i></h2>
-          <p>An instructor walks you through each video lesson with a PDF chord chart (No sheet music reading is required)</p>
-        </div>
-        <div class="sec">
-          <h2><i class="fa fa-music" aria-hidden="true"></i></h2>
-          <p>You learn by playing along with the video lessons or a downloadable mp3 backing track.</p>
-        </div>
-      </div>
-      </div>
-
-      <div id="newsletter">
-        <h2 align="center">Want to receive free tutorials?</h2>
-        <p align="center">Get a free tutorial delivered right to your inbox <span>each month!</span><br/>Sign up now!</p>
-        <div class="mc-field-group">
-<form id="mc-embedded-subscribe-form" class="validate" action="//naturalmusicstore.us12.list-manage.com/subscribe/post?u=3555d06362fd1009fbd0784ad&amp;id=ff59552330" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
-          <input type="text" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="EMAIL">
-          <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="mailchimp_btn">
-   </form>
-        </div>
-      </div>
 
     <?php } else { ?>
 
