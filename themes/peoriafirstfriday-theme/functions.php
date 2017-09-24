@@ -67,7 +67,7 @@ set_post_thumbnail_size( 150, 150, true );
 add_image_size( 'pages', 720, 300, true ); 
 }
 
-function natural_login_logo() { ?>
+function login_logo() { ?>
     <style type="text/css">
         body {
           background: #3c6898 !important;
@@ -82,7 +82,7 @@ function natural_login_logo() { ?>
         }
     </style>
 <?php }
-add_action( 'login_enqueue_scripts', 'natural_login_logo' );
+add_action( 'login_enqueue_scripts', 'login_logo' );
 
 global $woothemes_sensei;
 remove_action( 'sensei_before_main_content', array( $woothemes_sensei->frontend, 'sensei_output_content_wrapper' ), 10 );
@@ -98,15 +98,6 @@ function natural_theme_wrapper_start() {
 function natural_theme_wrapper_end() {
   echo '</div><!-- #content -->
   </div><!-- #container -->';
-}
-
-
-add_action('woocommerce_after_customer_login_form', 'get_started_button', 10);
-
-add_action('sensei_course_archive_main_content', 'get_started_button', 10);
-
-function get_started_button() {
-  echo '<div align="center"><h2>Looking for online lessons?</h2><br/><p>Bring your skills to the next level. Click the get started button to sign up for all available lessons.</p><a class="btn" href="https://www.naturalmusicstore.com/courses-overview/">Get Started</a></div>';
 }
 
 add_filter( 'single_add_to_cart_text', 'woo_custom_cart_button_text' );    // 2.1 +
@@ -141,22 +132,5 @@ add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
     add_theme_support( 'woocommerce' );
 }
-
-/**
- * Auto Complete all WooCommerce orders.
- */
-add_action( 'woocommerce_thankyou', 'custom_woocommerce_auto_complete_order' );
-function custom_woocommerce_auto_complete_order( $order_id ) { 
-    if ( ! $order_id ) {
-        return;
-    }
-
-    $order = wc_get_order( $order_id );
-    $order->update_status( 'completed' );
-}
-
-remove_filter('the_content', 'wpautop');
-
-
 
 ?>

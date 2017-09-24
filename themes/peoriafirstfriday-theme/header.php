@@ -3,7 +3,7 @@
 
 <head profile="http://gmpg.org/xfn/11">  
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
-<link rel="icon" href="<?php bloginfo('url');?>/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="<?php bloginfo('template_url');?>/favicon.ico" type="image/x-icon" />
 
 <title><?php bloginfo('name'); ?><?php wp_title(); ?></title>
 
@@ -49,9 +49,10 @@
 
 <?php echo '<body class="'.join(' ', get_body_class()).'">'.PHP_EOL; ?>
 
+<!--
 <div id="top">
   <div>
-    <a href="https://www.facebook.com/Naturalmusiclessons/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <a href="FACEBOOK_URL"><i class="fa fa-facebook" aria-hidden="true"></i></a>
     <a href="<?php bloginfo('url');?>/contact/"><i class="fa fa-envelope" aria-hidden="true"></i></a>    
   </div>
 
@@ -63,6 +64,7 @@
     <?php endif; ?>
   </div>
 </div>
+-->
 
 <div id="header">
 
@@ -85,7 +87,7 @@
 
     <?php if (is_front_page()) {?>
 
-      <div id="banner">
+      <!-- <div id="banner">
           <div class="banner-info">
             <h2><?php bloginfo('name'); ?></h2>
             <p>Test</p>
@@ -93,7 +95,7 @@
           </div>
           <div class="banner-info">
           </div>
-      </div>
+      </div> -->
 
 
     <?php } else { ?>
