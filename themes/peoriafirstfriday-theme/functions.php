@@ -84,13 +84,6 @@ function login_logo() { ?>
 <?php }
 add_action( 'login_enqueue_scripts', 'login_logo' );
 
-global $woothemes_sensei;
-remove_action( 'sensei_before_main_content', array( $woothemes_sensei->frontend, 'sensei_output_content_wrapper' ), 10 );
-remove_action( 'sensei_after_main_content', array( $woothemes_sensei->frontend, 'sensei_output_content_wrapper_end' ), 10 );
-
-add_action('sensei_before_main_content', 'natural_theme_wrapper_start', 10);
-add_action('sensei_after_main_content', 'natural_theme_wrapper_end', 10);
-
 function natural_theme_wrapper_start() {
   echo '<div id="container"><div id="content" role="main">';
 }
