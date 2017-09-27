@@ -12,16 +12,6 @@
 
  if ( function_exists('register_sidebar') )
    register_sidebar(array(
-    'name' => 'Top Bar',
-    'id' => 'top-bar',
-    'before_widget' => '',
-    'after_widget' => '',
-    'before_title' => '',
-    'after_title' => '',
-   ));
-
- if ( function_exists('register_sidebar') )
-   register_sidebar(array(
     'name' => 'Footer',
     'id' => 'footer',
     'before_widget' => '',
@@ -70,15 +60,24 @@ add_image_size( 'pages', 720, 300, true );
 function login_logo() { ?>
     <style type="text/css">
         body {
-          background: #3c6898 !important;
+          background: #3AA39F !important;
+        }
+        .login form {
+          background-color: #d9f9f8 !important;
+          box-shadow: none !important;
         }
         .login #backtoblog a, .login #nav a {
           color:#FFF !important;
         }
+        .wp-core-ui .button-primary {
+          border:none !important;
+          background: #3aa39f !important;
+        }
         #login h1 a, .login h1 a {
           background-image: url(<?php bloginfo('template_url');?>/images/logo.png);
           width: 100%;
-          background-size: 37%;
+          background-size: 40%;
+          height: 160px;
         }
     </style>
 <?php }

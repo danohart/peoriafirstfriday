@@ -9,7 +9,7 @@
 
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" /> 
 
-<link href='http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Open+Sans" rel="stylesheet">
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen,projection" />
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/font-awesome.min.css"/>
@@ -18,28 +18,8 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="<?php wp_title(); ?>" />
 <meta property="fb:admins" content="595996194" />
-<meta property="og:image" content="<?php bloginfo(template_url); ?>/images/homevideo.png" />
+<meta property="og:image" content="<?php bloginfo(template_url); ?>/images/logo.png" />
 <meta property="og:url" content="<?php the_permalink(); ?>" />
-
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '1115271365284511',
-      cookie     : true,
-      xfbml      : true,
-      version    : 'v2.8'
-    });
-    FB.AppEvents.logPageView();   
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
