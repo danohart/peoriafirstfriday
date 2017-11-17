@@ -28,6 +28,15 @@
 </head>
 
 <?php echo '<body class="'.join(' ', get_body_class()).'">'.PHP_EOL; ?>
+  <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=202807593118248";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
 
 <!--
 <div id="top">
@@ -64,18 +73,16 @@
       <?php wp_nav_menu( array('menu' => 'Main Nav', 'theme_location' => 'main-menu', 'items_wrap' => '%3$s', 'container' => 'false'  )); ?>
     </ul>
 
-
     <?php if (is_front_page()) {?>
 
-      <!-- <div id="banner">
+      <div id="banner">
           <div class="banner-info">
-            <h2><?php bloginfo('name'); ?></h2>
-            <p>Test</p>
-            <a class="btn" href="<?php bloginfo(url);?>/courses-overview/">Get Started</a>
+            <h2>What's Happening in Peoria on First Fridays</h2>
+            <p>First Friday is a national movement among artists in many cities across the United States. Artists open their studios to present their work to the public.</p>
+            <p>First Friday events keep the arts in the forefront of a community.</p>
+            <a class="btn" href="<?php bloginfo(url);?>/what-is-it//">Learn More</a>
           </div>
-          <div class="banner-info">
-          </div>
-      </div> -->
+      </div>
 
 
     <?php } else { ?>

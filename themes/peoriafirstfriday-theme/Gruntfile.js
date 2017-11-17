@@ -68,4 +68,5 @@ module.exports = function (grunt) {
 
   // Register Grunt tasks
   grunt.registerTask('default', 'sass');
+  grunt.registerTask('default', 'postcss');
 };
