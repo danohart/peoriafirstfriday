@@ -1,10 +1,11 @@
 body {
-  margin:0px;
+  margin:0px auto;
   padding:0px;
+  max-width: 1600px;
   font-size:1.05em;
   font-family: $secondary-font;
   font-weight: 300;
-  color:#5F5F5F;
+  color: $primary-font-color;
   background: $primary-color;
   transition: all 0.7s ease;
 }
@@ -25,7 +26,7 @@ body {
 .wp-caption {
 border: 1px solid #ddd;
 text-align: center;
-background-color: #f3f3f3;
+background-color: $primary-font-color;
 margin: 0px;
 border-radius: 0px;
 
@@ -109,17 +110,6 @@ input[type="submit"] {
     margin: 20px auto;
 }
 
-#logo {
-  width:10%;
-  padding:10px 25px;
-
-  img {
-  	width: 100%;
-  	height: auto;
-  	margin: 0px auto;
-	}
-}
-
 #title {
   text-transform: uppercase;
   color: #000;
@@ -132,15 +122,45 @@ input[type="submit"] {
 }
 
 #header {
-  background: $primary-color;
+  background: linear-gradient(rgba(126, 55, 45, .6), rgba(20,20,20, .6)), url('images/banner-1.jpg') bottom center no-repeat;
+  background-size: 100%;
   display: flex;
   flex-direction:row;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
+  color: #FFFFFF;
 
   h1 {
     padding: 0px;
     margin: 0px;
+  }
+
+  #title-banner {
+    padding: 130px 0px 130px 50px;
+    width: 50%;
+
+    h2 {
+      font-size: 50px;
+      padding: 20px 0px;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 28px;
+      font-weight: bold;
+    }
+  }
+
+  #logo {
+    width: 13%;
+    padding: 10px 50px;
+    border-right: 1px solid #FFFFFF;
+
+    img {
+      width: 100%;
+      height: auto;
+      margin: 0px auto;
+    }
   }
 }
 
@@ -266,6 +286,7 @@ h1.landing-title {
 
 footer {
   background: $background-color;
+  color: #EDEDED;
   padding:65px 5px 20px 5px;
   text-align: center;
 }
@@ -273,7 +294,7 @@ footer {
 .powered-by {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-content: center;
   flex-direction: row;
 
   div {
@@ -281,6 +302,8 @@ footer {
 
     img {
       vertical-align: middle;
+      width: 40%;
+      height: auto;
     }
   }
 }
@@ -297,57 +320,4 @@ ol.comment-list {
     margin: 20px;
     padding: 20px;
     box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.12);
-}
-
-/* ---- Mobile Styling ---- */
-@media handheld, only screen and (max-width: 730px) {
-  h1.page-title {
-    font-size:1.4em !important;
-  }
-  a.btn {
-    display: block;
-    width: 88%;
-    padding: 10px 0px;
-    margin: 10px auto;
-  }
-  #logo {
-    width: 22%;
-    padding: 6px 15px;
-  }
-  #header h1 {
-    font-size: 1.2em;
-  }
-  #banner {
-    background-size: 400%;
-    background-position: top right;
-    flex-direction: column;
-    padding:10px 0px;
-  }
-  #banner p {
-    font-size: 13px;
-  }
-  #banner .banner-info h2 {
-    font-size: 22px;
-  }
-  #banner .banner-info img {
-    width:80%;
-    height: auto;
-    margin:0px auto;
-    display: block;
-  }
-  .nav {
-    justify-content: center;
-    lex-direction: column;
-  }
-  #content {
-    padding:0px 10px;
-  }
-  blockquote {
-    font-size: 1em;
-    width: 95%;
-    margin-bottom: 10px;
-  }
-  h1.landing-title {
-    font-size: 1.3em;
-  }
 }

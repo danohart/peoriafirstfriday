@@ -7,12 +7,13 @@ Description: A WordPress theme by DanielHart.co :D
 Version: 1.0
 */
 body {
-  margin: 0px;
+  margin: 0px auto;
   padding: 0px;
+  max-width: 1600px;
   font-size: 1.05em;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
-  color: #5F5F5F;
+  color: #000000;
   background: #FCFCFC;
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease; }
@@ -30,7 +31,7 @@ body {
 .wp-caption {
   border: 1px solid #ddd;
   text-align: center;
-  background-color: #f3f3f3;
+  background-color: #000000;
   margin: 0px;
   border-radius: 0px; }
   .wp-caption img {
@@ -95,14 +96,6 @@ input[type="submit"] {
   width: 47%;
   margin: 20px auto; }
 
-#logo {
-  width: 10%;
-  padding: 10px 25px; }
-  #logo img {
-    width: 100%;
-    height: auto;
-    margin: 0px auto; }
-
 #title {
   text-transform: uppercase;
   color: #000;
@@ -112,7 +105,9 @@ input[type="submit"] {
     text-decoration: none; }
 
 #header {
-  background: #FCFCFC;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(126, 55, 45, 0.6)), to(rgba(20, 20, 20, 0.6))), url("images/banner-1.jpg") bottom center no-repeat;
+  background: linear-gradient(rgba(126, 55, 45, 0.6), rgba(20, 20, 20, 0.6)), url("images/banner-1.jpg") bottom center no-repeat;
+  background-size: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -123,12 +118,31 @@ input[type="submit"] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  color: #FFFFFF; }
   #header h1 {
     padding: 0px;
     margin: 0px; }
+  #header #title-banner {
+    padding: 130px 0px 130px 50px;
+    width: 50%; }
+    #header #title-banner h2 {
+      font-size: 50px;
+      padding: 20px 0px;
+      text-transform: uppercase; }
+    #header #title-banner p {
+      font-size: 28px;
+      font-weight: bold; }
+  #header #logo {
+    width: 13%;
+    padding: 10px 50px;
+    border-right: 1px solid #FFFFFF; }
+    #header #logo img {
+      width: 100%;
+      height: auto;
+      margin: 0px auto; }
 
 .nav {
   background: #F9F9F9;
@@ -174,7 +188,7 @@ input[type="submit"] {
   #banner .banner-info {
     padding: 120px 200px;
     max-width: 800px;
-    background-color: rgba(0, 0, 0, 0.6); }
+    background-color: rgba(0, 0, 0, 0.4); }
     #banner .banner-info h2 {
       color: #FCFCFC;
       text-transform: uppercase;
@@ -240,6 +254,7 @@ h1.landing-title {
 
 footer {
   background: #212121;
+  color: #EDEDED;
   padding: 65px 5px 20px 5px;
   text-align: center; }
 
@@ -250,9 +265,8 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -260,7 +274,9 @@ footer {
   .powered-by div {
     padding: 0px 20px; }
     .powered-by div img {
-      vertical-align: middle; }
+      vertical-align: middle;
+      width: 40%;
+      height: auto; }
 
 ol.comment-list {
   list-style: none;
@@ -275,6 +291,100 @@ ol.comment-list {
   -webkit-box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.12);
           box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.12); }
 
+.navigation-toggle, .navigation-checkbox {
+  display: none; }
+
+@media handheld, only screen and (max-width: 730px) {
+  .navigation-checkbox {
+    display: none;
+    opacity: 0;
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease; }
+
+  .navigation-toggle {
+    width: 40px;
+    height: 40px;
+    margin: 2px auto 23px auto;
+    display: block;
+    position: relative;
+    cursor: pointer; }
+
+  .navigation-toggle-label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #000000;
+    text-align: center;
+    display: block;
+    text-transform: uppercase;
+    position: relative;
+    bottom: -20px; }
+
+  .navigation-toggle-icon {
+    border-bottom: 6px solid #FCFCFC;
+    padding-top: 17px;
+    display: block; }
+
+  .navigation-toggle-icon:before,
+  .navigation-toggle-icon:after {
+    border-top: 6px solid #FCFCFC;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0; }
+
+  .navigation-toggle-icon:before {
+    top: 4px; }
+
+  .navigation-toggle-icon:after {
+    bottom: 4px; }
+
+  /*
+   * This is where all the animation happens
+   */
+  .navigation-toggle-icon,
+  .navigation-toggle-icon:before,
+  .navigation-toggle-icon:after {
+    -webkit-transition-property: border-color, -webkit-transform;
+    transition-property: border-color, -webkit-transform;
+    transition-property: transform, border-color;
+    transition-property: transform, border-color, -webkit-transform;
+    -webkit-transition-duration: 0.25s;
+            transition-duration: 0.25s;
+    -webkit-transition-timing-function: cubic-bezier(0.5, -0.5, 0.5, 1.5);
+            transition-timing-function: cubic-bezier(0.5, -0.5, 0.5, 1.5); }
+
+  .navigation-toggle-icon {
+    -webkit-transition-delay: 0.125s;
+            transition-delay: 0.125s; }
+
+  .navigation-toggle-icon:before,
+  .navigation-toggle-icon:after {
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+    -webkit-transform-origin: center;
+            transform-origin: center; }
+
+  .navigation-checkbox:checked + .navigation-toggle .navigation-toggle-icon {
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s; }
+  .navigation-checkbox:checked + .navigation-toggle .navigation-toggle-icon:before,
+  .navigation-checkbox:checked + .navigation-toggle .navigation-toggle-icon:after {
+    -webkit-transition-delay: 0.125s;
+            transition-delay: 0.125s; }
+  .navigation-checkbox:checked + .navigation-toggle .navigation-toggle-icon:before {
+    -webkit-transform: translateY(13px) rotate(135deg);
+            transform: translateY(13px) rotate(135deg); }
+  .navigation-checkbox:checked + .navigation-toggle .navigation-toggle-icon {
+    border-color: transparent; }
+  .navigation-checkbox:checked + .navigation-toggle .navigation-toggle-icon:after {
+    -webkit-transform: translateY(-13px) rotate(-135deg);
+            transform: translateY(-13px) rotate(-135deg); }
+
+  input[type=checkbox]:checked ~ .nav {
+    display: block !important;
+    opacity: 1;
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease; } }
 /* ---- Mobile Styling ---- */
 @media handheld, only screen and (max-width: 730px) {
   h1.page-title {
@@ -286,33 +396,18 @@ ol.comment-list {
     padding: 10px 0px;
     margin: 10px auto; }
 
-  #logo {
-    width: 22%;
-    padding: 6px 15px; }
-
-  #header h1 {
-    font-size: 1.2em; }
-
-  #banner {
-    background-size: 400%;
-    background-position: top right;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 10px 0px; }
-
-  #banner p {
-    font-size: 13px; }
-
-  #banner .banner-info h2 {
-    font-size: 22px; }
-
-  #banner .banner-info img {
-    width: 80%;
-    height: auto;
-    margin: 0px auto;
-    display: block; }
+  #header {
+    background-size: 200%; }
+    #header #logo {
+      width: 25%;
+      padding: 10px 19px; }
+    #header #title-banner {
+      padding: 30px 0px 30px 30px; }
+      #header #title-banner h2 {
+        font-size: 24px;
+        padding: 0px; }
+      #header #title-banner p {
+        font-size: 15px; }
 
   .nav {
     -webkit-box-pack: center;
@@ -328,13 +423,9 @@ ol.comment-list {
     width: 95%;
     margin-bottom: 10px; }
 
-  h1.landing-title {
-    font-size: 1.3em; } }
-.fb-events {
-  margin: 0px auto;
-  text-align: center;
-  width: 500px; }
-  .fb-events .subtitle {
-    font-weight: 100;
-    font-size: 10px;
-    font-variant: italic; }
+  .powered-by div {
+    font-size: 12px;
+    width: 22%; }
+    .powered-by div img {
+      width: 80%;
+      margin-top: 10px; } }

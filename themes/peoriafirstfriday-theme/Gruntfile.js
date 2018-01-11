@@ -59,14 +59,15 @@ module.exports = function (grunt) {
       }
     }
   });
+
   // Load Grunt plugins
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Register Grunt tasks
-  grunt.registerTask('default', 'sass');
-  grunt.registerTask('default', 'postcss');
+  grunt.registerTask('default', ['sass', 'postcss', 'watch']);
 };

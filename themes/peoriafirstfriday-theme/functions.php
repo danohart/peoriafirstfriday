@@ -60,10 +60,10 @@ add_image_size( 'pages', 720, 300, true );
 function login_logo() { ?>
     <style type="text/css">
         body {
-          background: #3AA39F !important;
+          background: #000000 !important;
         }
         .login form {
-          background-color: #d9f9f8 !important;
+          background-color: #FFFFFF !important;
           box-shadow: none !important;
         }
         .login #backtoblog a, .login #nav a {
@@ -71,10 +71,10 @@ function login_logo() { ?>
         }
         .wp-core-ui .button-primary {
           border:none !important;
-          background: #3aa39f !important;
+          background: #000000 !important;
         }
         #login h1 a, .login h1 a {
-          background-image: url(<?php bloginfo('template_url');?>/images/logo.png);
+          background-image: url(<?php bloginfo('template_url');?>/images/logo-white.png);
           width: 100%;
           background-size: 40%;
           height: 160px;
@@ -82,19 +82,5 @@ function login_logo() { ?>
     </style>
 <?php }
 add_action( 'login_enqueue_scripts', 'login_logo' );
-
-function natural_theme_wrapper_start() {
-  echo '<div id="container"><div id="content" role="main">';
-}
-
-function natural_theme_wrapper_end() {
-  echo '</div><!-- #content -->
-  </div><!-- #container -->';
-}
-
-add_action( 'after_setup_theme', 'woocommerce_support' );
-function woocommerce_support() {
-    add_theme_support( 'woocommerce' );
-}
 
 ?>
