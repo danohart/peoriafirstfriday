@@ -233,7 +233,7 @@ function wpuf_override_admin_edit_link( $url, $post_id ) {
     if ( is_admin() ) {
         return $url;
     }
-
+   
     $override = wpuf_get_option( 'override_editlink', 'wpuf_general', 'no' );
 
     if ( $override == 'yes' ) {
@@ -247,7 +247,7 @@ function wpuf_override_admin_edit_link( $url, $post_id ) {
         }
     }
 
-    return $url;
+    return apply_filters( 'wpuf_front_post_edit_link', $url );
 }
 
 add_filter( 'get_edit_post_link', 'wpuf_override_admin_edit_link', 10, 2 );
@@ -327,8 +327,14 @@ class WPUF_Walker_Category_Checklist extends Walker {
         else
             $name = $taxonomy;
 
+        if ( 'yes' === $show_inline ) {
+            $inline_class = 'wpuf-checkbox-inline';
+        } else {
+            $inline_class = '';
+        }
+
         $class = isset( $args['class'] ) ? $args['class'] : '';
-        $output .= "\n<li id='{$taxonomy}-{$category->term_id}'>" . '<label class="selectit"><input class="'. $class . '" value="' . $category->term_id . '" type="checkbox" name="' . $name . '[]" id="in-' . $taxonomy . '-' . $category->term_id . '"' . checked( in_array( $category->term_id, $selected_cats ), true, false ) . disabled( empty( $args['disabled'] ), false, false ) . ' /> ' . esc_html( apply_filters( 'the_category', $category->name ) ) . '</label>';
+        $output .= "\n<li class='" . $inline_class . "' id='{$taxonomy}-{$category->term_id}'>" . '<label class="selectit"><input class="'. $class . '" value="' . $category->term_id . '" type="checkbox" name="' . $name . '[]" id="in-' . $taxonomy . '-' . $category->term_id . '"' . checked( in_array( $category->term_id, $selected_cats ), true, false ) . disabled( empty( $args['disabled'] ), false, false ) . ' /> ' . esc_html( apply_filters( 'the_category', $category->name ) ) . '</label>';
     }
 
     function end_el( &$output, $category, $depth = 0, $args = array() ) {
@@ -365,6 +371,8 @@ function wpuf_category_checklist( $post_id = 0, $selected_cats = false, $attr = 
     } else {
         $args['selected_cats'] = array();
     }
+
+    $args['show_inline'] = $attr['show_inline'];
 
     $args['class'] = $class;
 
@@ -770,6 +778,23 @@ function wpuf_show_custom_fields( $content ) {
                     }
 
                     $html .= $address_html;
+                    break;
+
+                case 'repeat':
+                    $value = get_post_meta( $post->ID, $attr['name'] );
+                    $newvalue = array();
+
+                    foreach ($value as $i => $str) {
+                        if (preg_match('/[^\|\s]/', $str)) {
+                            $newvalue[] = $str;
+                        }
+                    }
+
+                    $new = implode( ', ', $newvalue );
+
+                    if ( $new ) {
+                        $html .= sprintf( '<li><label>%s</label>: %s</li>', $attr['label'], make_clickable( $new ) );
+                    }
                     break;
 
                 default:
@@ -2187,12 +2212,21 @@ function wpuf_send_mail_to_guest ( $post_id_encoded, $form_id_encoded, $charging
     $guest_email_body = wpuf_get_option( 'guest_email_body', 'wpuf_mails',  $default_body );
 
     if ( !empty( $guest_email_body ) ) {
-        $body = str_replace( '{activation_link}', '<a href="'.$encoded_guest_url.'">Publish Post</a>', $guest_email_body );
+        $blogname     = wp_specialchars_decode(get_option('blogname'), ENT_QUOTES);
+        $field_search = array( '{activation_link}', '{sitename}' );
+
+        $field_replace = array(
+            '<a href="'.$encoded_guest_url.'">Publish Post</a>',
+            $blogname
+        );
+
+        $body = str_replace( $field_search, $field_replace, $guest_email_body );
     } else {
         $body = $default_body;
     }
 
-    $headers  = array('Content-Type: text/html; charset=UTF-8');
+    $headers = array('Content-Type: text/html; charset=UTF-8');
+    $body    = get_formatted_mail_body( $body, $subject);
 
     wp_mail( $to, $subject, $body, $headers );
 
@@ -2324,4 +2358,59 @@ function wpuf_posts_submitted_by( $form_id ) {
  */
 function wpuf_form_posts_count( $form_id ) {
     return count( wpuf_posts_submitted_by( $form_id ) );
+}
+
+/**
+ * Get formatted email body
+ *
+ * @since  2.9
+ *
+ * @param  string $message
+ *
+ * @return string
+ */
+function get_formatted_mail_body( $message, $subject ) {
+
+    if ( wpuf()->is_pro() && wpuf_pro_is_module_active( 'email-templates/email-templates.php' ) ) {
+        $css    = '';
+        $header = apply_filters( 'wpuf_email_header', '' );
+        $footer = apply_filters( 'wpuf_email_footer', '' );
+
+        if ( empty( $header ) ) {
+            ob_start();
+            include WPUF_PRO_INCLUDES . '/templates/email/header.php';
+            $header = ob_get_clean();
+        }
+
+        if ( empty( $footer ) ) {
+            ob_start();
+            include WPUF_PRO_INCLUDES . '/templates/email/footer.php';
+            $footer = ob_get_clean();
+        }
+
+        ob_start();
+        include WPUF_PRO_INCLUDES . '/templates/email/style.php';
+        $css = apply_filters( 'wpuf_email_style', ob_get_clean() );
+
+        $content = $header . $message . $footer;
+
+        if ( ! class_exists( 'Emogrifier' ) ) {
+            require_once WPUF_PRO_INCLUDES . '/libs/Emogrifier.php';
+        }
+
+        try {
+
+            // apply CSS styles inline for picky email clients
+            $emogrifier = new Emogrifier( $content, $css );
+            $content = $emogrifier->emogrify();
+
+        } catch ( Exception $e ) {
+
+            echo $e->getMessage();
+        }
+
+        return $content;
+    }
+
+    return $message;
 }
