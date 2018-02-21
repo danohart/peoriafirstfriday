@@ -1,12 +1,12 @@
 body {
-  margin:0px auto;
-  padding:0px;
+  margin: 0px auto;
+  padding: 0px;
   max-width: 1600px;
   font-size:1.05em;
   font-family: $secondary-font;
   font-weight: 300;
   color: $primary-font-color;
-  background: $primary-color;
+  background: $background-color;
   transition: all 0.7s ease;
 }
 
@@ -54,6 +54,10 @@ a {
   &:hover {
     text-decoration: none;
   }
+}
+
+a.button {
+  @include button;
 }
 
 blockquote {
@@ -122,32 +126,33 @@ input[type="submit"] {
 }
 
 #header {
-  background: linear-gradient(rgba(126, 55, 45, .6), rgba(20,20,20, .6)), url('images/banner-1.jpg') bottom center no-repeat;
-  background-size: 100%;
+  background-position: top center !important;
+  background-size: 100% !important;
   display: flex;
   flex-direction:row;
   align-items: center;
   justify-content: left;
   color: #FFFFFF;
 
-  h1 {
-    padding: 0px;
-    margin: 0px;
-  }
-
   #title-banner {
-    padding: 130px 0px 130px 50px;
+    padding: 110px 0px 130px 50px;
     width: 50%;
 
-    h2 {
+    h1 {
       font-size: 50px;
       padding: 20px 0px;
       text-transform: uppercase;
+      margin: 0px;
+    }
+
+    h3 {
+      font-size: 28px;
+      font-weight: bold;
+      margin: 0px;
     }
 
     p {
-      font-size: 28px;
-      font-weight: bold;
+      font-size: 24px;
     }
   }
 
@@ -298,11 +303,12 @@ footer {
   flex-direction: row;
 
   div {
-    padding:0px 20px;
+    padding: 0px 20px;
+    width: 10%;
 
     img {
       vertical-align: middle;
-      width: 40%;
+      width: 65%;
       height: auto;
     }
   }

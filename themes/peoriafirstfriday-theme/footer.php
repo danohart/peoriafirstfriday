@@ -7,6 +7,9 @@
   	<div>
   		Logo Design by <a href="http://letteringworks.com/"><img src="<?php bloginfo('template_url');?>/images/letteringworks.png" alt="Lettering Works"/></a>
   	</div>
+    <div>
+      Photos by <a href="http://violetandivy.com/"><img src="<?php bloginfo('template_url');?>/images/violetandivy.png" alt="Violet And Ivy Photography"/></a>
+    </div>
   	<div>
   		Hosted by <a href="http://graphicalforce.com/"><img src="<?php bloginfo('template_url');?>/images/graphicalforce.png" alt="Graphical Force"/></a>
   	</div>

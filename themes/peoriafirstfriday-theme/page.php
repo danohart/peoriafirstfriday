@@ -6,13 +6,14 @@
 		<?php if (is_front_page()) {?>
 			
 		<?php } else { ?>
-			<h1 class="page-title"><?php the_title();?></h1>
-		<?php } ?>
-		<div id="content">
-			<p><?php the_content();?></p>
 			
-			<?php comments_template( '/comments.php' ); ?>
+		<?php } ?>
+		<div id="title-banner">
+		    <h1><?php the_title();?></h1>
+		    <?php the_content();?>
+		  </div>
+		  
 		</div>
 	<?php endwhile; // End of the loop. ?>
 
-<?php get_footer(); ?>  
+<?php get_footer(); ?>

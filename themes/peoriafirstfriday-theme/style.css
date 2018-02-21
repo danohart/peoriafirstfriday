@@ -14,7 +14,7 @@ body {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   color: #000000;
-  background: #FCFCFC;
+  background: #212121;
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease; }
 
@@ -51,6 +51,27 @@ a {
   font-weight: 400; }
   a:hover {
     text-decoration: none; }
+
+a.button {
+  color: #000000;
+  text-transform: uppercase;
+  font-size: 18px;
+  text-decoration: none;
+  text-align: center;
+  background-color: #FFFFFF;
+  padding: 15px 50px;
+  border: none;
+  -webkit-box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.4);
+  border-radius: 30px;
+  margin: 20px 0px;
+  display: inline-block; }
+  a.button:hover {
+    background-color: whitesmoke;
+    -webkit-box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.4);
+            box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.4); }
+  a.button:active {
+    background-color: #e6e6e6; }
 
 blockquote {
   font-size: 2em;
@@ -105,9 +126,8 @@ input[type="submit"] {
     text-decoration: none; }
 
 #header {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(126, 55, 45, 0.6)), to(rgba(20, 20, 20, 0.6))), url("images/banner-1.jpg") bottom center no-repeat;
-  background: linear-gradient(rgba(126, 55, 45, 0.6), rgba(20, 20, 20, 0.6)), url("images/banner-1.jpg") bottom center no-repeat;
-  background-size: 100%;
+  background-position: top center !important;
+  background-size: 100% !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -122,19 +142,20 @@ input[type="submit"] {
       -ms-flex-pack: left;
           justify-content: left;
   color: #FFFFFF; }
-  #header h1 {
-    padding: 0px;
-    margin: 0px; }
   #header #title-banner {
-    padding: 130px 0px 130px 50px;
+    padding: 110px 0px 130px 50px;
     width: 50%; }
-    #header #title-banner h2 {
+    #header #title-banner h1 {
       font-size: 50px;
       padding: 20px 0px;
-      text-transform: uppercase; }
-    #header #title-banner p {
+      text-transform: uppercase;
+      margin: 0px; }
+    #header #title-banner h3 {
       font-size: 28px;
-      font-weight: bold; }
+      font-weight: bold;
+      margin: 0px; }
+    #header #title-banner p {
+      font-size: 24px; }
   #header #logo {
     width: 13%;
     padding: 10px 50px;
@@ -272,10 +293,11 @@ footer {
       -ms-flex-direction: row;
           flex-direction: row; }
   .powered-by div {
-    padding: 0px 20px; }
+    padding: 0px 20px;
+    width: 10%; }
     .powered-by div img {
       vertical-align: middle;
-      width: 40%;
+      width: 65%;
       height: auto; }
 
 ol.comment-list {
@@ -390,19 +412,23 @@ ol.comment-list {
   h1.page-title {
     font-size: 1.4em !important; }
 
-  a.btn {
+  a.button {
     display: block;
     width: 88%;
     padding: 10px 0px;
-    margin: 10px auto; }
+    margin: 10px auto;
+    font-size: 15px; }
 
   #header {
-    background-size: 200%; }
+    background-size: 250% !important;
+    background-position: center center !important; }
     #header #logo {
       width: 25%;
       padding: 10px 19px; }
     #header #title-banner {
       padding: 30px 0px 30px 30px; }
+      #header #title-banner h1 {
+        font-size: 21px; }
       #header #title-banner h2 {
         font-size: 24px;
         padding: 0px; }
