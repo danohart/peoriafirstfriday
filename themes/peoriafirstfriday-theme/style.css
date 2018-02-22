@@ -128,7 +128,7 @@ input[type="submit"] {
 
 #header {
   background-position: top center !important;
-  background-size: 100% !important;
+  background-size: cover !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -432,7 +432,6 @@ input[type=checkbox]:checked ~ .nav {
     font-size: 15px; }
 
   #header {
-    background-size: 250% !important;
     background-position: center center !important;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
