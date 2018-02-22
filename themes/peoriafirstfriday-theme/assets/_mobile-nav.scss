@@ -1,8 +1,4 @@
-.navigation-toggle, .navigation-checkbox, .nav {
-  display: none;
-}
-
-  // Mobile Nav Styles
+// Mobile Nav Styles
   .navigation-checkbox {
     display: none;
     opacity: 0;
@@ -99,7 +95,7 @@
   }
 
   input[type=checkbox]:checked ~ .nav {
-      display: block !important;
+      visibility: visible !important;
       opacity: 1;
       transition: all 0.7s ease;
   }

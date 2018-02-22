@@ -181,8 +181,9 @@ input[type="submit"] {
   list-style: none;
   margin:0px;
   padding: 0px;
-  display: flex;
-  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
 
   li a {
     color: $primary-color;
