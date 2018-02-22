@@ -1,4 +1,5 @@
 body {
+  position: relative;
   margin: 0px auto;
   padding: 0px;
   max-width: 1600px;
@@ -133,6 +134,7 @@ input[type="submit"] {
   align-items: center;
   justify-content: left;
   color: #FFFFFF;
+  position: relative;
 
   #title-banner {
     padding: 110px 0px 130px 50px;
@@ -170,18 +172,20 @@ input[type="submit"] {
 }
 
 .nav {
-  background: #F9F9F9;
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  background: rgba(0,0,0, 0.8);
   background-size: 100%;
-  width:100%;
+  width: 30%;
   list-style: none;
   margin:0px;
   padding: 0px;
   display: flex;
   justify-content: center;
-  border-top:1px solid #EDEDED;
-  border-bottom:1px solid #EDEDED;
 
   li a {
+    color: $primary-color;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 700;
@@ -192,6 +196,7 @@ input[type="submit"] {
 
     &:hover {
       background:#EDEDED;
+      color: $secondary-color;
       -webkit-transition: all 0.7s ease;
       transition: all 0.7s ease;
     }

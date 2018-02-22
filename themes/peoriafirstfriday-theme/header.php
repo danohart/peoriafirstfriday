@@ -28,15 +28,22 @@
 
 <div id="header" style="background:linear-gradient(rgba(126, 55, 45, .6), rgba(20,20,20, .6)), url(<?php the_post_thumbnail_url('large');?>) no-repeat;">
 
+  <!-- Start of navigation toggle -->
+    <input id="navigation-checkbox" class="navigation-checkbox" type="checkbox">
+    <label class="navigation-toggle" for="navigation-checkbox">
+      <span class="navigation-toggle-icon"></span>
+      <span class="navigation-toggle-label">Menu</span>
+    </label>
+  <!-- End of navigation toggle -->
+  <ul class="nav">
+      <?php wp_nav_menu( array('menu' => 'Main Nav', 'theme_location' => 'main-menu', 'items_wrap' => '%3$s', 'container' => 'false'  )); ?>
+  </ul>
+
   <div id="logo">
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
       <img src="<?php bloginfo('template_url'); ?>/images/logo-white.png"/>
     </a>
   </div>
-
- <!--- <ul class="nav">
-      <?php wp_nav_menu( array('menu' => 'Main Nav', 'theme_location' => 'main-menu', 'items_wrap' => '%3$s', 'container' => 'false'  )); ?>
-  </ul>-->
 
     <?php if (is_front_page()) {?>
 

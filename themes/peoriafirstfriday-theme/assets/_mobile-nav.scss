@@ -1,8 +1,7 @@
-.navigation-toggle, .navigation-checkbox {
+.navigation-toggle, .navigation-checkbox, .nav {
   display: none;
 }
 
-@media handheld, only screen and (max-width: 730px) {
   // Mobile Nav Styles
   .navigation-checkbox {
     display: none;
@@ -11,18 +10,20 @@
   }
 
   .navigation-toggle {
+    position: absolute;
+    top: 35px;
+    right: 50px;
     width: 40px;
     height: 40px;
     margin: 2px auto 23px auto;
     display: block;
-    position: relative;
     cursor: pointer;
   }
 
   .navigation-toggle-label {
     font-weight: bold;
     font-size: 14px;
-    color: $secondary-color;
+    color: #FFFFFF;
     text-align: center;
     display: block;
     text-transform: uppercase;
@@ -101,5 +102,12 @@
       display: block !important;
       opacity: 1;
       transition: all 0.7s ease;
+  }
+
+/* ---- Mobile Styling ---- */
+@media handheld, only screen and (max-width: 730px) {
+  .navigation-toggle {
+    top: 7px;
+    right: 14px;
   }
 }
