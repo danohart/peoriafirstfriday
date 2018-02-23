@@ -288,6 +288,13 @@ footer {
   color: #EDEDED;
   padding: 65px 5px 20px 5px;
   text-align: center; }
+  footer .wbbb {
+    text-align: center;
+    font-size: 9px;
+    color: #525252;
+    padding: 20px 0px; }
+    footer .wbbb a {
+      text-decoration: none; }
 
 .powered-by {
   display: -webkit-box;

@@ -14,6 +14,8 @@
   		Hosted by <a href="http://graphicalforce.com/"><img src="<?php bloginfo('template_url');?>/images/graphicalforce.png" alt="Graphical Force"/></a>
   	</div>
   </div>
+
+  <div class="wbbb"><a href="https://www.instagram.com/explore/tags/westbluffbestbluff/">#westbluffbestbluff</a></div>
 </footer>
 
 <?php wp_footer();?>
