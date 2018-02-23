@@ -22,7 +22,7 @@
       border-right: 0;
     }
 
-    #title-banner {
+    #main-content {
       padding: 0px;
       width: 80%;
 
@@ -43,8 +43,10 @@
 
   .nav {
     justify-content: center;
-    lex-direction: column;
+    flex-direction: row;
     width:70%;
+    top: 80px;
+    right: 12px;
   }
 
   #content {

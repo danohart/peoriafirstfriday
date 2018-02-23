@@ -45,8 +45,8 @@
     </a>
   </div>
 
-    <?php if (is_front_page()) {?>
+  <?php if (is_front_page()) {?>
 
-    <?php } else { ?>
+  <?php } else { ?>
  
-    <?php } ?>
+  <?php } ?>

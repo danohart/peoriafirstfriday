@@ -136,7 +136,7 @@ input[type="submit"] {
   color: #FFFFFF;
   position: relative;
 
-  #title-banner {
+  #main-content {
     padding: 110px 0px 130px 50px;
     width: 50%;
 
@@ -175,8 +175,7 @@ input[type="submit"] {
   position: absolute;
   top: 100px;
   right: 20px;
-  background: rgba(0,0,0, 0.8);
-  background-size: 100%;
+  background: rgba(0, 0, 0, 0);
   width: 30%;
   list-style: none;
   margin:0px;
@@ -186,6 +185,7 @@ input[type="submit"] {
   transition: all 0.4s ease;
 
   li a {
+    background: rgba(0,0,0, 0.8);
     color: $primary-color;
     text-decoration: none;
     text-transform: uppercase;
@@ -194,6 +194,7 @@ input[type="submit"] {
     transition: all 0.7s ease;
     display: block;
     padding:25px 40px;
+    margin-bottom:2px;
 
     &:hover {
       background:#EDEDED;
@@ -278,21 +279,6 @@ a.btn {
   background: $primary-color;
   background-size: 100%;
   padding: 0px 60px 40px 60px;
-}
-
-h1.page-title {
-    background-color: #F9F9F9;
-    padding: 20px 50px;
-    color: #000;
-}
-
-h1.home-title {
-    padding: 50px 0px 0px 0px;
-    font-size: 3em;
-}
-
-h1.landing-title {
-  margin: 30px auto 10px auto;
 }
 
 footer {

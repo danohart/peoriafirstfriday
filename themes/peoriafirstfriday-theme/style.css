@@ -6,6 +6,24 @@ Author URI: http://danielhart.co/
 Description: A WordPress theme by DanielHart.co :D
 Version: 1.0
 */
+@-webkit-keyframes staircaseReveal {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(32px) translateY(-24px);
+            transform: translateX(32px) translateY(-24px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0); } }
+@keyframes staircaseReveal {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(32px) translateY(-24px);
+            transform: translateX(32px) translateY(-24px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0); } }
 body {
   position: relative;
   margin: 0px auto;
@@ -144,19 +162,19 @@ input[type="submit"] {
           justify-content: left;
   color: #FFFFFF;
   position: relative; }
-  #header #title-banner {
+  #header #main-content {
     padding: 110px 0px 130px 50px;
     width: 50%; }
-    #header #title-banner h1 {
+    #header #main-content h1 {
       font-size: 50px;
       padding: 20px 0px;
       text-transform: uppercase;
       margin: 0px; }
-    #header #title-banner h3 {
+    #header #main-content h3 {
       font-size: 28px;
       font-weight: bold;
       margin: 0px; }
-    #header #title-banner p {
+    #header #main-content p {
       font-size: 24px; }
   #header #logo {
     width: 13%;
@@ -171,8 +189,7 @@ input[type="submit"] {
   position: absolute;
   top: 100px;
   right: 20px;
-  background: rgba(0, 0, 0, 0.8);
-  background-size: 100%;
+  background: rgba(0, 0, 0, 0);
   width: 30%;
   list-style: none;
   margin: 0px;
@@ -182,6 +199,7 @@ input[type="submit"] {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease; }
   .nav li a {
+    background: rgba(0, 0, 0, 0.8);
     color: #FCFCFC;
     text-decoration: none;
     text-transform: uppercase;
@@ -189,7 +207,8 @@ input[type="submit"] {
     -webkit-transition: all 0.7s ease;
     transition: all 0.7s ease;
     display: block;
-    padding: 25px 40px; }
+    padding: 25px 40px;
+    margin-bottom: 2px; }
     .nav li a:hover {
       background: #EDEDED;
       color: #000000;
@@ -263,18 +282,6 @@ a.btn {
   background: #FCFCFC;
   background-size: 100%;
   padding: 0px 60px 40px 60px; }
-
-h1.page-title {
-  background-color: #F9F9F9;
-  padding: 20px 50px;
-  color: #000; }
-
-h1.home-title {
-  padding: 50px 0px 0px 0px;
-  font-size: 3em; }
-
-h1.landing-title {
-  margin: 30px auto 10px auto; }
 
 footer {
   background: #212121;
@@ -408,6 +415,18 @@ input[type=checkbox]:checked ~ .nav {
   opacity: 1;
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease; }
+  input[type=checkbox]:checked ~ .nav li:nth-child(1) {
+    -webkit-animation: staircaseReveal 120ms 0s both;
+            animation: staircaseReveal 120ms 0s both; }
+  input[type=checkbox]:checked ~ .nav li:nth-child(2) {
+    -webkit-animation: staircaseReveal 120ms 120ms both;
+            animation: staircaseReveal 120ms 120ms both; }
+  input[type=checkbox]:checked ~ .nav li:nth-child(3) {
+    -webkit-animation: staircaseReveal 120ms 240ms both;
+            animation: staircaseReveal 120ms 240ms both; }
+  input[type=checkbox]:checked ~ .nav li:nth-child(4) {
+    -webkit-animation: staircaseReveal 120ms 360ms both;
+            animation: staircaseReveal 120ms 360ms both; }
 
 /* ---- Mobile Styling ---- */
 @media handheld, only screen and (max-width: 730px) {
@@ -436,23 +455,28 @@ input[type=checkbox]:checked ~ .nav {
       width: 25%;
       padding: 10px 19px;
       border-right: 0; }
-    #header #title-banner {
+    #header #main-content {
       padding: 0px;
       width: 80%; }
-      #header #title-banner h1 {
+      #header #main-content h1 {
         font-size: 24px; }
-      #header #title-banner h2 {
+      #header #main-content h2 {
         font-size: 21px;
         padding: 0px; }
-      #header #title-banner p {
+      #header #main-content p {
         font-size: 18px; }
 
   .nav {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    lex-direction: column;
-    width: 70%; }
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 70%;
+    top: 80px;
+    right: 12px; }
 
   #content {
     padding: 0px 10px; }
