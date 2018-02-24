@@ -1,0 +1,14 @@
+// Directory Cards
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  flex-direction: row;
+
+  .card {
+    background: #FFFFFF;
+    max-width: 27%;
+    margin: 5px 10px;
+  }
+}
