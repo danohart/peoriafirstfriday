@@ -1,11 +1,14 @@
-<?php include(TEMPLATEPATH."/header.php");?>
+<?php include(TEMPLATEPATH."/header.php");
+// Index Page
+?>
 
-<div id="content">
+
 	<?php while ( have_posts() ) : the_post(); ?>
-		<h1><?php the_title();?></h1>
-
-		<p><?php the_content();?></p>
+		<div id="main-content">
+		    <h1><?php the_title();?></h1>
+		    <?php the_content();?>
+		 </div>
+		</div> <!-- End #header div -->
 	<?php endwhile; // End of the loop. ?>
-</div>
 
-<?php get_footer(); ?>  
+<?php get_footer(); ?>
