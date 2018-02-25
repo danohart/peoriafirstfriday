@@ -75,8 +75,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 50px;
+  padding: 20px 0px;
   text-transform: uppercase;
+  margin: 0px;
 }
 
 h2 {
@@ -84,7 +86,9 @@ h2 {
 }
 
 h3 {
-  font-size:1em;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0px;
 }
 
 h4 { 
@@ -93,8 +97,8 @@ h4 {
 }
 
 p {
-  margin-bottom:0px;
   padding:6px 0px;
+  font-size: 24px;
 
   &.center {
     text-align: center !important;
@@ -139,23 +143,6 @@ input[type="submit"] {
   #main-content {
     padding: 110px 0px 130px 50px;
     width: 50%;
-
-    h1 {
-      font-size: 50px;
-      padding: 20px 0px;
-      text-transform: uppercase;
-      margin: 0px;
-    }
-
-    h3 {
-      font-size: 28px;
-      font-weight: bold;
-      margin: 0px;
-    }
-
-    p {
-      font-size: 24px;
-    }
   }
 
   #logo {

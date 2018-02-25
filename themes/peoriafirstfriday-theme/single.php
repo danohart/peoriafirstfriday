@@ -1,5 +1,5 @@
 <?php include(TEMPLATEPATH."/header.php");?>
-
+<!-- Single post template -->
 
   <?php while ( have_posts() ) : the_post(); ?>
     <div id="main-content">

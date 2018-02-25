@@ -7,8 +7,46 @@
   flex-direction: row;
 
   .card {
-    background: #FFFFFF;
-    max-width: 27%;
+  	background: #FFFFFF;
+  	color: #000000;
+    max-width: 40%;
     margin: 5px 10px;
+    border-radius: 5px 5px 0px 0px;
+
+    .featured-image {
+    	img {
+    		width: 100%;
+    		height: auto;
+    		border-radius: 5px 5px 0px 0px;
+    	}
+    }
+
+    .no-image {
+    	img {
+    		width: 100%;
+    		height: auto;
+    		border-radius: 5px 5px 0px 0px;
+    	}
+    }
+
+    .inside-wrap {
+    	padding: 25px;
+    }
+
+    h2 {
+    	font-size: 30px;
+    	margin-bottom: 0px;
+    }
+
+    h3 {
+    	font-size: 14px;
+    	font-weight: bold;
+    	margin-bottom: 12px;
+    }
+
+    p {
+    	font-size: 17px;
+    	margin: 0px;
+    }
   }
 }

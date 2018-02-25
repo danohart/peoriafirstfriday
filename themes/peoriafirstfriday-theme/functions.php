@@ -54,7 +54,7 @@ if ( function_exists( 'add_theme_support' ) ) {
 add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 150, 150, true );
 
-add_image_size( 'pages', 720, 300, true ); 
+add_image_size( 'space', 500, 300, true );
 }
 
 function login_logo() { ?>
