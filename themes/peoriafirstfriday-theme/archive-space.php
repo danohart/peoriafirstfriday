@@ -23,18 +23,23 @@
 		        <h2><?php the_title();?></h2>
 		        <span><em><?php echo $current_tagline; ?></em></span>
 		        <p><?php echo $current_address; ?></p>
-		        <p><a href="<?php echo $current_website; ?>" target="_blank">Website</a></p>
+		        <?php if( empty( $current_website) ) { 
+		        	// null
+				} else { ?>
+		        	<p><a href="<?php echo $current_website; ?>" target="_blank">Website</a></p>
+		  		<?php } ?>
+		        
 		        <div class="additional-info">
 			        <!-- <h3>Is Alcohol Served?: <?php echo $current_alcohol; ?></h3> -->
 
-			        <h3>Type of Space</h3>
+			        <h3>Type of Space: 
 			          	<?php
 						foreach ( $spacetypes as $spacetype ) {
 							if (in_array($spacetype, $current_spacetypes)) { ?>
 							    <input type="button" value="<?php echo $spacetype; ?>">
 							<?php }
 						}
-						?>
+						?></h3>
 			    </div>
 	    	</div>
 	      </div>
