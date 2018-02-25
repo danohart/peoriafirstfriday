@@ -71,27 +71,38 @@ function space_build_meta_box( $post ){
 
 	// retrieve the _space_alcohol current value
 	$current_alcohol = get_post_meta( $post->ID, '_space_alcohol', true );
-
-	// retrieve the _space_address current value
+	$current_tagline = get_post_meta( $post->ID, '_space_tagline', true );
 	$current_address = get_post_meta( $post->ID, '_space_address', true );
+	$current_website = get_post_meta( $post->ID, '_space_website', true );
+	$current_socialmedia = get_post_meta( $post->ID, '_space_socialmedia', true );
 
-	$spacetypes = array( 'Studio', 'Gallery', 'Bar', 'Restuarant' );
-	
-	// stores _space_spacetypes array 
-	$current_spacetypes = ( get_post_meta( $post->ID, '_space_spacetypes', true ) ) ? get_post_meta( $post->ID, '_space_spacetypes', true ) : array();
+	$spacetypes = array( 'Studio', 'Gallery', 'Bar', 'Restuarant', 'Shop' );
+	// stores _space_spacetypes array
+	$current_spacetypes = get_post_meta( $post->ID, '_space_spacetypes', true );
 
 	?>
 	<div class='inside'>
+		<h1 align="center">Please fill out all forms</h1>
+		<h3><?php _e( 'Tagline', 'firstfriday_spaces_plugin' ); ?></h3>
+		<p>
+			<h4>Short description of your space</h4>
+			<input type="text" name="tagline" placeholder="Studio that hosts a new artist every month!" value="<?php echo $current_tagline; ?>" /> 
+		</p>
 
 		<h3><?php _e( 'Location Address', 'firstfriday_spaces_plugin' ); ?></h3>
 		<p>
 			<textarea type="text" name="address"><?php echo $current_address; ?></textarea> 
 		</p>
 
+		<h3><?php _e( 'Links', 'firstfriday_spaces_plugin' ); ?></h3>
+		<p>
+			Website: <input type="text" name="website" placeholder="Include http://" value="<?php echo $current_website; ?>" />
+		</p>
+
 		<h3><?php _e( 'Is Alcohol Served?', 'firstfriday_spaces_plugin' ); ?></h3>
 		<p>
-			<input type="radio" name="alcohol" value="0" <?php checked( $current_alcohol, '0' ); ?> /> Yes<br />
-			<input type="radio" name="alcohol" value="1" <?php checked( $current_alcohol, '1' ); ?> /> No
+			<input type="radio" name="alcohol" value="Yes" <?php checked( $current_alcohol, 'Yes' ); ?> /> Yes<br />
+			<input type="radio" name="alcohol" value="No" <?php checked( $current_alcohol, 'No' ); ?> /> No
 		</p>
 
 		<h3><?php _e( 'Space Types', 'firstfriday_spaces_plugin' ); ?></h3>
@@ -137,6 +148,24 @@ function space_save_meta_box_data( $post_id ){
 	}
 
 	// store custom fields values
+	// tagline string
+	if ( isset( $_REQUEST['tagline'] ) ) {
+		update_post_meta( $post_id, '_space_tagline', sanitize_text_field( $_POST['tagline'] ) );
+	}
+
+	// store custom fields values
+	// website string
+	if ( isset( $_REQUEST['website'] ) ) {
+		update_post_meta( $post_id, '_space_website', sanitize_text_field( $_POST['website'] ) );
+	}
+
+	// store custom fields values
+	// social media string
+	if ( isset( $_REQUEST['socialmedia'] ) ) {
+		update_post_meta( $post_id, '_space_socialmedia', sanitize_text_field( $_POST['socialmedia'] ) );
+	}
+
+	// store custom fields values
 	// address string
 	if ( isset( $_REQUEST['address'] ) ) {
 		update_post_meta( $post_id, '_space_address', sanitize_text_field( $_POST['address'] ) );
@@ -147,7 +176,7 @@ function space_save_meta_box_data( $post_id ){
 	if( isset( $_POST['spacetypes'] ) ){
 		$spacetypes = (array) $_POST['spacetypes'];
 
-		// sinitize array
+		// sanitize array
 		$spacetypes = array_map( 'sanitize_text_field', $spacetypes );
 
 		// save data
