@@ -12,6 +12,16 @@
 	        $current_spacetypes = ( get_post_meta( $post->ID, '_space_spacetypes', true ) ) ? get_post_meta( $post->ID, '_space_spacetypes', true ) : array();
 
 	        ?>
+	        <h2>Filter</h2>
+	        <div class="filter-checkboxes">
+		        <?php
+				foreach ( $spacetypes as $spacetype ) {
+					?>
+					<input type="checkbox" name="spacetypes[]" value="<?php echo $spacetype; ?>" /><?php echo $spacetype; ?> <br />
+					<?php
+				}
+				?>
+			</div>
 	      <div class="card">
 	      	<?php if ( has_post_thumbnail() ) { ?>
 				<div class="featured-image"><?php the_post_thumbnail('space');?></div>

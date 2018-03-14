@@ -39,7 +39,7 @@ function firstfriday_spaces() {
 		'description'           => __( 'First Friday Businesses and Studios', 'text_domain' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'thumbnail' ),
-		'taxonomies'            => array( 'spaces_categories' ),
+		'taxonomies'            => array( '' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
@@ -52,28 +52,13 @@ function firstfriday_spaces() {
 		'has_archive'           => true,
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
-		'capability_type'       => 'page',
+		'query_var' 			=> true,
+		'rewrite' 				=> array('slug' => 'space'),
+		'capability_type'       => 'page'
 	);
 	register_post_type( 'space', $args );
 }
 add_action( 'init', 'firstfriday_spaces' );
-
-function spaces_categories() {
-	// create a new taxonomy
-	register_taxonomy(
-		'people',
-		'post',
-		array(
-			'label' => __( 'Type of Space' ),
-			'rewrite' => array( 'slug' => 'spaces' ),
-			'capabilities' => array(
-				'assign_terms' => 'edit_guides',
-				'edit_terms' => 'publish_guides'
-			)
-		)
-	);
-}
-add_action( 'init', 'spaces_categories' );
 
 // Add meta box
 function space_add_meta_boxes( $post ){
