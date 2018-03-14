@@ -22,6 +22,7 @@
 			<div class="inside-wrap">
 		        <h2><?php the_title();?></h2>
 		        <span><em><?php echo $current_tagline; ?></em></span>
+
 		        <p><?php echo $current_address; ?></p>
 		        <?php if( empty( $current_website) ) { 
 		        	// null

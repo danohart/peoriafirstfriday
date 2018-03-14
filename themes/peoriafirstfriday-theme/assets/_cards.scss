@@ -12,6 +12,11 @@
     max-width: 40%;
     margin: 5px 10px;
     border-radius: 5px 5px 0px 0px;
+    @for $i from 1 to 10 {
+	  &:nth-child(#{$i}) { 
+	  	animation: staircaseReveal 120ms $i * 0.1s both;
+	  }
+	}
 
     .featured-image {
     	img {
