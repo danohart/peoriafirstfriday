@@ -12,17 +12,7 @@
 	        $current_spacetypes = ( get_post_meta( $post->ID, '_space_spacetypes', true ) ) ? get_post_meta( $post->ID, '_space_spacetypes', true ) : array();
 
 	        ?>
-	        <h2>Filter</h2>
-	        <div class="filter-checkboxes">
-		        <?php
-				foreach ( $spacetypes as $spacetype ) {
-					?>
-					<input type="checkbox" name="spacetypes[]" value="<?php echo $spacetype; ?>" /><?php echo $spacetype; ?> <br />
-					<?php
-				}
-				?>
-			</div>
-	      <div class="card">
+	      <div class="card <?php foreach ( $spacetypes as $spacetype ) {if (in_array($spacetype, $current_spacetypes)) { ?><?php echo $spacetype; ?> <?php }}?>">
 	      	<?php if ( has_post_thumbnail() ) { ?>
 				<div class="featured-image"><?php the_post_thumbnail('space');?></div>
 			<?php
@@ -34,23 +24,18 @@
 		        <span><em><?php echo $current_tagline; ?></em></span>
 
 		        <p><?php echo $current_address; ?></p>
-		        <?php if( empty( $current_website) ) { 
-		        	// null
-				} else { ?>
-		        	<p><a href="<?php echo $current_website; ?>" target="_blank">Website</a></p>
-		  		<?php } ?>
-		        
+		        <p><a href="<?php echo $current_website; ?>" target="_blank">Website</a></p>
 		        <div class="additional-info">
 			        <!-- <h3>Is Alcohol Served?: <?php echo $current_alcohol; ?></h3> -->
 
-			        <h3>Type of Space: 
+			        <h3>Type of Space</h3>
 			          	<?php
 						foreach ( $spacetypes as $spacetype ) {
 							if (in_array($spacetype, $current_spacetypes)) { ?>
 							    <input type="button" value="<?php echo $spacetype; ?>">
 							<?php }
 						}
-						?></h3>
+						?>
 			    </div>
 	    	</div>
 	      </div>
