@@ -83,7 +83,7 @@ function space_build_meta_box( $post ){
 	$current_spacetypes = get_post_meta( $post->ID, '_space_spacetypes', true );
 
 	?>
-	<div class='inside'>
+	<div class="left" style="float: left; width:45%;">
 		<h1 align="center">Please fill out all forms</h1>
 		<h3><?php _e( 'Tagline', 'firstfriday_spaces_plugin' ); ?></h3>
 		<p>
@@ -100,7 +100,8 @@ function space_build_meta_box( $post ){
 		<p>
 			Website: <input type="text" name="website" placeholder="Include http://" value="<?php echo $current_website; ?>" />
 		</p>
-
+	</div>
+	<div class="right" style="float: right; width:45%;">
 		<h3><?php _e( 'Is Alcohol Served?', 'firstfriday_spaces_plugin' ); ?></h3>
 		<p>
 			<input type="radio" name="alcohol" value="Yes" <?php checked( $current_alcohol, 'Yes' ); ?> /> Yes<br />
@@ -118,6 +119,7 @@ function space_build_meta_box( $post ){
 		?>
 		</p>
 	</div>
+	<br clear="all"/>
 	<?php
 }
 
