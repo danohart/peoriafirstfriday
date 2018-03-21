@@ -78,7 +78,7 @@ function space_build_meta_box( $post ){
 	$current_website = get_post_meta( $post->ID, '_space_website', true );
 	$current_socialmedia = get_post_meta( $post->ID, '_space_socialmedia', true );
 
-	$spacetypes = array( 'Studio', 'Gallery', 'Bar', 'Restuarant', 'Shop' );
+	$spacetypes = array( 'Studio', 'Gallery', 'Bar', 'Restaurant', 'Shop' );
 	// stores _space_spacetypes array
 	$current_spacetypes = get_post_meta( $post->ID, '_space_spacetypes', true );
 

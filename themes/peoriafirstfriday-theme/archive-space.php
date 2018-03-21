@@ -6,7 +6,7 @@
 		    <button class="all active">All</button>
 		    <button class="Studio" data-cat="Studio">Studio</button>
 		    <button class="Gallery" data-cat="Gallery">Gallery</button>
-		    <button class="Restuarant" data-cat="Restuarant">Restuarant</button>
+		    <button class="Restaurant" data-cat="Restaurant">Restaurant</button>
 		    <button class="Bar" data-cat="Bar">Bar</button>
 		    <button class="Shop" data-cat="Shop">Shop</button>
 		</div>
@@ -17,7 +17,7 @@
 	        $current_address = get_post_meta( $post->ID, '_space_address', true );
 	        $current_website = get_post_meta( $post->ID, '_space_website', true );
 	        $current_socialmedia = get_post_meta( $post->ID, '_space_socialmedia', true );
-	        $spacetypes = array( 'Studio', 'Gallery', 'Bar', 'Restuarant', 'Shop' );
+	        $spacetypes = array( 'Studio', 'Gallery', 'Bar', 'Restaurant', 'Shop' );
 	        $current_spacetypes = ( get_post_meta( $post->ID, '_space_spacetypes', true ) ) ? get_post_meta( $post->ID, '_space_spacetypes', true ) : array();
 
 	        ?>
