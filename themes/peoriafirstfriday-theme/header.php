@@ -26,7 +26,11 @@
 
 <?php echo '<body class="'.join(' ', get_body_class()).'">'.PHP_EOL; ?>
 
+<?php if(is_archive()) {?>
+<div id="header" style="background:linear-gradient(rgba(126, 55, 45, .6), rgba(20,20,20, .6)), url(<?php bloginfo('template_url');?>/images/banner.jpg);">
+<?php } else { ?>
 <div id="header" style="background:linear-gradient(rgba(126, 55, 45, .6), rgba(20,20,20, .6)), url(<?php the_post_thumbnail_url('large');?>) no-repeat;">
+<?php } ?>
 
   <!-- Start of navigation toggle -->
     <input id="navigation-checkbox" class="navigation-checkbox" type="checkbox">

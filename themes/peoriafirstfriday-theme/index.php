@@ -1,7 +1,5 @@
-<?php include(TEMPLATEPATH."/header.php");
-// Index Page
-?>
-
+<?php include(TEMPLATEPATH."/header.php"); ?>
+<!-- Index Page -->
 
 	<?php while ( have_posts() ) : the_post(); ?>
 		<div id="main-content">

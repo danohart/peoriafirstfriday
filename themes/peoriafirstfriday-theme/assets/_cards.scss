@@ -1,0 +1,82 @@
+// Navigation Filtering
+
+.filter-cat {
+    button {
+        padding: 6px 23px;
+        background-color: #000000;
+        color: #FFFFFF;
+        border: 0;
+        font-size: 16px;
+        text-transform: uppercase;
+        border-radius: 5px;
+
+        &.active {
+            background-color: #FFFFFF;
+            color: #000000;
+        }
+    }
+}
+
+// Directory Cards
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  flex-direction: row;
+
+  .card {
+  	background: #FFFFFF;
+  	color: #000000;
+    max-width: 28%;
+    margin: 10px 10px;
+    border-radius: 5px 5px 0px 0px;
+    display: none;
+
+    &.active {
+        display:block;
+    }
+
+    @for $i from 1 to 10 {
+	  &:nth-child(#{$i}) { 
+	  	animation: staircaseReveal 120ms $i * 0.1s both;
+	  }
+	}
+
+    .featured-image {
+    	img {
+    		width: 100%;
+    		height: auto;
+    		border-radius: 5px 5px 0px 0px;
+    	}
+    }
+
+    .no-image {
+    	img {
+    		width: 100%;
+    		height: auto;
+    		border-radius: 5px 5px 0px 0px;
+    	}
+    }
+
+    .inside-wrap {
+    	padding: 25px;
+    }
+
+    h2 {
+    	font-size: 30px;
+    	margin-bottom: 0px;
+    }
+
+    h3 {
+    	font-size: 14px;
+    	font-weight: bold;
+    	margin-bottom: 12px;
+    }
+
+    p {
+    	font-size: 17px;
+    	margin: 0px;
+    }
+  }
+}
