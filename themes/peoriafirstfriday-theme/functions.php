@@ -1,5 +1,5 @@
 <?php  
-
+// flush_rewrite_rules( false );
  if ( function_exists('register_sidebar') )
    register_sidebar(array(
     'name' => 'Right Sidebar',

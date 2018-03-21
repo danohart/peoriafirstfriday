@@ -4,9 +4,11 @@
     	<div class="filter-cat">
     		Select: 
 		    <button class="all active">All</button>
-		    <button class="Bar" data-cat="Bar ">Bar</button>
 		    <button class="Studio" data-cat="Studio ">Studio</button>
 		    <button class="Gallery" data-cat="Gallery ">Gallery</button>
+		    <button class="Restuarant" data-cat="Restuarant ">Restuarant</button>
+		    <button class="Bar" data-cat="Bar ">Bar</button>
+		    <button class="Shop" data-cat="Shop ">Shop</button>
 		</div>
     	<div class="card-wrapper">
 	        <?php while ( have_posts() ) : the_post(); ?>
