@@ -1,35 +1,31 @@
-// Find all YouTube videos
-var $allVideos = $("iframe[src^='//www.youtube.com']"),
+var filterActive;
 
-    // The element that is fluid width
-    $fluidEl = $("body");
+function filterCategory(category) {
+    if (filterActive != category) {
+        
+        // reset results list
+        $('.card-wrapper .card').removeClass('active');
+        
+        // elements to be filtered
+        $('.card-wrapper .card')
+            .filter('[data-cat="' + category + '"]')
+            .addClass('active');
+        
+        // reset active filter
+        filterActive = category;
+        $('.spaces button').removeClass('active');
+    }
+}
 
-// Figure out and save aspect ratio for each video
-$allVideos.each(function() {
+$('.card-wrapper .card').addClass('active');
 
-  $(this)
-    .data('aspectRatio', this.height / this.width)
-
-    // and remove the hard coded width/height
-    .removeAttr('height')
-    .removeAttr('width');
-
+$('.spaces button').click(function() {
+    if ($(this).hasClass('all')) {
+        $('.card-wrapper .card').addClass('active');
+        filterActive = 'all';
+        $('.spaces button').removeClass('active');
+    } else {
+        filterCategory($(this).attr('data-cat'));
+    }
+    $(this).addClass('active');
 });
-
-// When the window is resized
-$(window).resize(function() {
-
-  var newWidth = $fluidEl.width();
-
-  // Resize all videos according to their own aspect ratio
-  $allVideos.each(function() {
-
-    var $el = $(this);
-    $el
-      .width(newWidth)
-      .height(newWidth * $el.data('aspectRatio'));
-
-  });
-
-// Kick off one resize to fix all videos on page load
-}).resize();

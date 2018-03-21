@@ -30,6 +30,7 @@
   gtag('config', 'UA-41524322-17');
 </script>
 
-
+<script src="<?php bloginfo('template_url'); ?>/js/jquery.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/peoriafirstfriday-theme.js" ></script>
 </body>
 </html>

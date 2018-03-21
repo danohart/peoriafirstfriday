@@ -1,6 +1,13 @@
 <?php include(TEMPLATEPATH."/header.php");?>
 <!-- Single template for Spaces page -->
-    <div id="main-content">
+    <div id="main-content" class="spaces">
+    	<div class="filter-cat">
+    		Select: 
+		    <button class="all active">All</button>
+		    <button class="Bar" data-cat="Bar ">Bar</button>
+		    <button class="Studio" data-cat="Studio ">Studio</button>
+		    <button class="Gallery" data-cat="Gallery ">Gallery</button>
+		</div>
     	<div class="card-wrapper">
 	        <?php while ( have_posts() ) : the_post(); ?>
 	        <?php 
@@ -12,12 +19,12 @@
 	        $current_spacetypes = ( get_post_meta( $post->ID, '_space_spacetypes', true ) ) ? get_post_meta( $post->ID, '_space_spacetypes', true ) : array();
 
 	        ?>
-	      <div class="card <?php foreach ( $spacetypes as $spacetype ) {if (in_array($spacetype, $current_spacetypes)) { ?><?php echo $spacetype; ?> <?php }}?>">
+	      <div class="card" data-cat="<?php foreach ( $spacetypes as $spacetype ) {if (in_array($spacetype, $current_spacetypes)) { ?><?php echo $spacetype; ?> <?php }}?>">
 	      	<?php if ( has_post_thumbnail() ) { ?>
 				<div class="featured-image"><?php the_post_thumbnail('space');?></div>
 			<?php
 			} else { ?>
-				<div class="no-image"><img src="http://via.placeholder.com/500x300?text=FirstFridays"/></div>
+				<div class="no-image"><img src="https://via.placeholder.com/500x300?text=<?php the_title();?>"/></div>
 			<?php } ?>
 			<div class="inside-wrap">
 		        <h2><?php the_title();?></h2>

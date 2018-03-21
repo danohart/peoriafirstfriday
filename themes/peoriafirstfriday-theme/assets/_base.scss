@@ -143,6 +143,11 @@ input[type="submit"] {
   #main-content {
     padding: 110px 0px 130px 50px;
     width: 50%;
+
+    &.spaces {
+      width: 90%;
+      min-height: 1040px;
+    }
   }
 
   #logo {
@@ -170,6 +175,7 @@ input[type="submit"] {
   visibility: hidden;
   opacity: 0;
   transition: all 0.4s ease;
+  z-index: 1;
 
   li a {
     background: rgba(0,0,0, 0.8);

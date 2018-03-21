@@ -169,6 +169,9 @@ input[type="submit"] {
   #header #main-content {
     padding: 110px 0px 130px 50px;
     width: 50%; }
+    #header #main-content.spaces {
+      width: 90%;
+      min-height: 1040px; }
   #header #logo {
     width: 13%;
     padding: 10px 50px;
@@ -190,7 +193,8 @@ input[type="submit"] {
   visibility: hidden;
   opacity: 0;
   -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease; }
+  transition: all 0.4s ease;
+  z-index: 1; }
   .nav li a {
     background: rgba(0, 0, 0, 0.8);
     color: #FCFCFC;
@@ -323,6 +327,18 @@ ol.comment-list {
   -webkit-box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.12);
           box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.12); }
 
+.filter-cat button {
+  padding: 6px 23px;
+  background-color: #000000;
+  color: #FFFFFF;
+  border: 0;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 5px; }
+  .filter-cat button.active {
+    background-color: #FFFFFF;
+    color: #000000; }
+
 .card-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -339,9 +355,12 @@ ol.comment-list {
   .card-wrapper .card {
     background: #FFFFFF;
     color: #000000;
-    max-width: 40%;
-    margin: 5px 10px;
-    border-radius: 5px 5px 0px 0px; }
+    max-width: 28%;
+    margin: 10px 10px;
+    border-radius: 5px 5px 0px 0px;
+    display: none; }
+    .card-wrapper .card.active {
+      display: block; }
     .card-wrapper .card:nth-child(1) {
       -webkit-animation: staircaseReveal 120ms 0.1s both;
               animation: staircaseReveal 120ms 0.1s both; }
@@ -404,7 +423,8 @@ ol.comment-list {
   height: 40px;
   margin: 2px auto 23px auto;
   display: block;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 1; }
 
 .navigation-toggle-label {
   font-weight: bold;

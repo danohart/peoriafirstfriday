@@ -83,8 +83,9 @@ function space_build_meta_box( $post ){
 	$current_spacetypes = get_post_meta( $post->ID, '_space_spacetypes', true );
 
 	?>
+
+	<h1 align="center">Please fill out all forms</h1>
 	<div class="left" style="float: left; width:45%;">
-		<h1 align="center">Please fill out all forms</h1>
 		<h3><?php _e( 'Tagline', 'firstfriday_spaces_plugin' ); ?></h3>
 		<p>
 			<h4>Short description of your space</h4>
