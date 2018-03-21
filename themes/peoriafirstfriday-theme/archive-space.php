@@ -1,5 +1,5 @@
 <?php include(TEMPLATEPATH."/header.php");?>
-<!-- Single template for Spaces page -->
+<!-- archive template for Spaces page -->
     <div id="main-content" class="spaces">
     	<div class="filter-cat">
     		Select: 
