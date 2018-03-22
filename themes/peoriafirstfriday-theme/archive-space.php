@@ -21,7 +21,7 @@
 	        $current_spacetypes = ( get_post_meta( $post->ID, '_space_spacetypes', true ) ) ? get_post_meta( $post->ID, '_space_spacetypes', true ) : array();
 
 	        ?>
-	      <div class="card"<?php foreach ( $spacetypes as $spacetype ) {if (in_array($spacetype, $current_spacetypes)) { ?> data-cat="<?php echo $spacetype; ?>"<?php }}?>>
+	      <div class="card"<?php foreach ( $spacetypes as $spacetype ) { if (in_array($spacetype, $current_spacetypes)) { ?> data-cat="<?php echo $spacetype; ?>"<?php }}?>>
 	      	<?php if ( has_post_thumbnail() ) { ?>
 				<div class="featured-image"><?php the_post_thumbnail('space');?></div>
 			<?php
@@ -32,8 +32,13 @@
 		        <h2><?php the_title();?></h2>
 		        <span><em><?php echo $current_tagline; ?></em></span>
 
-		        <p><?php echo $current_address; ?></p>
-		        <p><a href="<?php echo $current_website; ?>" target="_blank">Website</a></p>
+		        <p><?php echo $current_address; ?><br/> Peoria, IL</p>
+		        <p>
+		        	<?php if (empty($current_website)) { 
+		        	} else { ?>
+		        		<a href="<?php echo $current_website; ?>" target="_blank">Website</a>
+		        	<?php } ?>
+		        </p>
 		        <div class="additional-info">
 			        <!-- <h3>Is Alcohol Served?: <?php echo $current_alcohol; ?></h3> -->
 

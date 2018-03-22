@@ -127,6 +127,27 @@ p {
   p.center {
     text-align: center !important; }
 
+.nf-form-cont input[type="button"] {
+  color: #000000;
+  text-transform: uppercase;
+  font-size: 18px;
+  text-decoration: none;
+  text-align: center;
+  background-color: #FFFFFF;
+  padding: 15px 50px;
+  border: none;
+  -webkit-box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.4);
+  border-radius: 30px;
+  margin: 20px 0px;
+  display: inline-block; }
+  .nf-form-cont input[type="button"]:hover {
+    background-color: whitesmoke;
+    -webkit-box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.4);
+            box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.4); }
+  .nf-form-cont input[type="button"]:active {
+    background-color: #e6e6e6; }
+
 input[type="submit"] {
   padding: 25px 70px;
   font-size: 18px;
@@ -343,6 +364,17 @@ input[type='text'], input[type='email'], input[type='text'] {
     background-color: #FFFFFF;
     color: #000000; }
 
+.card {
+  background: #FFFFFF;
+  color: #000000;
+  margin: 10px 10px;
+  border-radius: 5px 5px 0px 0px;
+  max-width: 100%; }
+  .card h1, .card h2, .card h3 {
+    padding-top: 0px; }
+  .card .inside-wrap {
+    padding: 25px; }
+
 .card-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -357,11 +389,7 @@ input[type='text'], input[type='email'], input[type='text'] {
       -ms-flex-direction: row;
           flex-direction: row; }
   .card-wrapper .card {
-    background: #FFFFFF;
-    color: #000000;
     max-width: 28%;
-    margin: 10px 10px;
-    border-radius: 5px 5px 0px 0px;
     display: none; }
     .card-wrapper .card.active {
       display: block; }
@@ -400,8 +428,6 @@ input[type='text'], input[type='email'], input[type='text'] {
       width: 100%;
       height: auto;
       border-radius: 5px 5px 0px 0px; }
-    .card-wrapper .card .inside-wrap {
-      padding: 25px; }
     .card-wrapper .card h2 {
       font-size: 30px;
       margin-bottom: 0px; }

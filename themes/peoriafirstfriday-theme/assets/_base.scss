@@ -105,6 +105,10 @@ p {
   }
 }
 
+.nf-form-cont input[type="button"] {
+  @include button;
+}
+
 input[type="submit"] {
   padding: 25px 70px;
   font-size: 18px;

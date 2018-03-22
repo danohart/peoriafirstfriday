@@ -1,6 +1,6 @@
 <?php include(TEMPLATEPATH."/header.php");?>
 <!-- Single template for Spaces page -->
-    <div id="main-content">
+    <div id="main-content" class="">
         <?php while ( have_posts() ) : the_post(); ?>
         <?php 
 
@@ -11,27 +11,31 @@
 
         ?>
       <div class="card">
-        <h1><?php the_title();?></h1>
-        <h3>Loction Address</h3>
-        <p>
-          <?php echo $current_address; ?>
-        </p>
+        <div class="inside-wrap">
+          <h1><?php the_title();?></h1>
+          <h3>Loction Address</h3>
+          <p>
+            <?php echo $current_address; ?><br/>Peoria, IL
+          </p>
 
-        <h3>Is Alcohol Served?</h3>
-        <p>
-          <?php echo $current_alcohol; ?>
-        </p>
+          <?php if (empty($current_website)) { 
+            } else { ?>
+              <p><a href="<?php echo $current_website; ?>" target="_blank">Website</a></p>
+          <?php } ?>
 
-        <h3>Type of Space</h3>
-        <p>
+          <h3>Is Alcohol Served?</h3>
+          <p>
+            <?php echo $current_alcohol; ?>
+          </p>
+
+          <h3>Type of Space: 
           <?php
-          foreach ( $spacetypes as $spacetype ) {
-            ?>
-            <input type="checkbox" name="spacetypes[]" value="<?php echo $spacetype; ?>" <?php checked( ( in_array( $spacetype, $current_spacetypes ) ) ? $spacetype : '', $spacetype ); ?> /><?php echo $spacetype; ?> <br />
-            <?php
-          }
-          ?>
-        </p>
+            foreach ( $spacetypes as $spacetype ) {
+              if (in_array($spacetype, $current_spacetypes)) { ?>
+                  <input type="button" value="<?php echo $spacetype; ?>">
+              <?php }
+            } ?></h3>
+        </div>
       </div>
       <?php endwhile; // End of the loop. ?>
     </div>

@@ -17,6 +17,24 @@
     }
 }
 
+// Individual cards, single page cards
+
+.card {
+  background: #FFFFFF;
+  color: #000000;
+  margin: 10px 10px;
+  border-radius: 5px 5px 0px 0px;
+  max-width: 100%;
+
+  h1, h2, h3 {
+    padding-top: 0px;
+  }
+
+  .inside-wrap {
+    padding: 25px;
+  }
+}
+
 // Directory Cards
 
 .card-wrapper {
@@ -24,13 +42,10 @@
   flex-wrap: wrap;
   flex: 1;
   flex-direction: row;
-
+  
+  // Change width for archive page
   .card {
-  	background: #FFFFFF;
-  	color: #000000;
     max-width: 28%;
-    margin: 10px 10px;
-    border-radius: 5px 5px 0px 0px;
     display: none;
 
     &.active {
@@ -57,10 +72,6 @@
     		height: auto;
     		border-radius: 5px 5px 0px 0px;
     	}
-    }
-
-    .inside-wrap {
-    	padding: 25px;
     }
 
     h2 {

@@ -94,7 +94,9 @@ function space_build_meta_box( $post ){
 
 		<h3><?php _e( 'Location Address', 'firstfriday_spaces_plugin' ); ?></h3>
 		<p>
-			<textarea type="text" name="address"><?php echo $current_address; ?></textarea> 
+			<input type="text" name="address" placeholder="Street Address" size="45" value="<?php echo $current_address; ?>" /><br/>
+			<input type="text" name="address_city" placeholder="Peoria" size="7" value="Peoria" />
+			<input type="text" name="address_state" maxlength="2" size="2" value="IL" />
 		</p>
 
 		<h3><?php _e( 'Links', 'firstfriday_spaces_plugin' ); ?></h3>
