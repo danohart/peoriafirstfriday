@@ -21,7 +21,7 @@
 	        $current_spacetypes = ( get_post_meta( $post->ID, '_space_spacetypes', true ) ) ? get_post_meta( $post->ID, '_space_spacetypes', true ) : array();
 
 	        ?>
-	      <div class="card" data-cat="<?php foreach ( $spacetypes as $spacetype ) { if (in_array($spacetype, $current_spacetypes)) { ?><?php echo $spacetype; ?> <?php }}?>">
+	      <div class="card active" data-cat="<?php foreach ( $spacetypes as $spacetype ) { if (in_array($spacetype, $current_spacetypes)) { ?><?php echo $spacetype; ?> <?php }}?>">
 	      	<?php if ( has_post_thumbnail() ) { ?>
 				<div class="featured-image"><?php the_post_thumbnail('space');?></div>
 			<?php

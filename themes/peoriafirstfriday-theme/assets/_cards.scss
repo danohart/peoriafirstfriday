@@ -46,15 +46,11 @@
   // Change width for archive page
   .card {
     max-width: 28%;
-    display: none;
-
     &.active {
-        display:block;
-    }
-
-    @for $i from 1 to 10 {
-	  &:nth-child(#{$i}) { 
-	  	animation: staircaseReveal 120ms $i * 0.1s both;
+      @for $i from 1 to 10 {
+  	  &:nth-child(#{$i}) { 
+  	  	animation: staircaseReveal 120ms $i * 0.1s both;
+      }
 	  }
 	}
 

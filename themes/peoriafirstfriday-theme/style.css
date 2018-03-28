@@ -389,35 +389,32 @@ input[type='text'], input[type='email'], input[type='text'] {
       -ms-flex-direction: row;
           flex-direction: row; }
   .card-wrapper .card {
-    max-width: 28%;
-    display: none; }
-    .card-wrapper .card.active {
-      display: block; }
-    .card-wrapper .card:nth-child(1) {
+    max-width: 28%; }
+    .card-wrapper .card.active:nth-child(1) {
       -webkit-animation: staircaseReveal 120ms 0.1s both;
               animation: staircaseReveal 120ms 0.1s both; }
-    .card-wrapper .card:nth-child(2) {
+    .card-wrapper .card.active:nth-child(2) {
       -webkit-animation: staircaseReveal 120ms 0.2s both;
               animation: staircaseReveal 120ms 0.2s both; }
-    .card-wrapper .card:nth-child(3) {
+    .card-wrapper .card.active:nth-child(3) {
       -webkit-animation: staircaseReveal 120ms 0.3s both;
               animation: staircaseReveal 120ms 0.3s both; }
-    .card-wrapper .card:nth-child(4) {
+    .card-wrapper .card.active:nth-child(4) {
       -webkit-animation: staircaseReveal 120ms 0.4s both;
               animation: staircaseReveal 120ms 0.4s both; }
-    .card-wrapper .card:nth-child(5) {
+    .card-wrapper .card.active:nth-child(5) {
       -webkit-animation: staircaseReveal 120ms 0.5s both;
               animation: staircaseReveal 120ms 0.5s both; }
-    .card-wrapper .card:nth-child(6) {
+    .card-wrapper .card.active:nth-child(6) {
       -webkit-animation: staircaseReveal 120ms 0.6s both;
               animation: staircaseReveal 120ms 0.6s both; }
-    .card-wrapper .card:nth-child(7) {
+    .card-wrapper .card.active:nth-child(7) {
       -webkit-animation: staircaseReveal 120ms 0.7s both;
               animation: staircaseReveal 120ms 0.7s both; }
-    .card-wrapper .card:nth-child(8) {
+    .card-wrapper .card.active:nth-child(8) {
       -webkit-animation: staircaseReveal 120ms 0.8s both;
               animation: staircaseReveal 120ms 0.8s both; }
-    .card-wrapper .card:nth-child(9) {
+    .card-wrapper .card.active:nth-child(9) {
       -webkit-animation: staircaseReveal 120ms 0.9s both;
               animation: staircaseReveal 120ms 0.9s both; }
     .card-wrapper .card .featured-image img {
