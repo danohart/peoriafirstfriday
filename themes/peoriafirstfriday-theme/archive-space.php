@@ -40,7 +40,6 @@
 		        	<?php } ?>
 		        </p>
 		        <div class="additional-info">
-			        <!-- <h3>Is Alcohol Served?: <?php echo $current_alcohol; ?></h3> -->
 
 			        <h3>Type of Space</h3>
 			          	<?php

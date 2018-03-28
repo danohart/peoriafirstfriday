@@ -96,3 +96,34 @@
     }
   }
 }
+
+/* ---- Mobile Styling ---- */
+@media handheld, only screen and (max-width: 730px) {
+  .filter-cat {
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+
+    span {
+      display: none;
+    }
+
+    button {
+      margin: 6px 0px;
+    }
+  }
+
+  .card-wrapper {
+    .card {
+      max-width: 43%;
+
+      .inside-wrap {
+        padding: 15px;
+
+        p {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

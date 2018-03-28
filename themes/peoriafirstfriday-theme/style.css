@@ -459,6 +459,23 @@ input[type='text'], input[type='email'], input[type='text'] {
       font-size: 17px;
       margin: 0px; }
 
+/* ---- Mobile Styling ---- */
+@media handheld, only screen and (max-width: 730px) {
+  .filter-cat {
+    width: 100%;
+    margin: 0px auto;
+    text-align: center; }
+    .filter-cat span {
+      display: none; }
+    .filter-cat button {
+      margin: 6px 0px; }
+
+  .card-wrapper .card {
+    max-width: 43%; }
+    .card-wrapper .card .inside-wrap {
+      padding: 15px; }
+      .card-wrapper .card .inside-wrap p {
+        font-size: 15px; } }
 .navigation-checkbox {
   display: none;
   opacity: 0;

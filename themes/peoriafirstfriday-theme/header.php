@@ -19,7 +19,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="<?php wp_title(); ?>" />
 <meta property="fb:admins" content="595996194" />
-<meta property="og:image" content="<?php bloginfo(template_url); ?>/images/logo-black.png" />
+<meta property="og:image" content="<?php bloginfo('template_url'); ?>/images/logo-black.png" />
 <meta property="og:url" content="<?php the_permalink(); ?>" />
 
 </head>
