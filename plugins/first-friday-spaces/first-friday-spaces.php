@@ -89,7 +89,7 @@ function space_build_meta_box( $post ){
 		<h3><?php _e( 'Tagline', 'firstfriday_spaces_plugin' ); ?></h3>
 		<p>
 			<h4>Short description of your space</h4>
-			<input type="text" name="tagline" placeholder="Studio that hosts a new artist every month!" value="<?php echo $current_tagline; ?>" /> 
+			<input type="text" name="tagline" size="45" placeholder="Studio that hosts a new artist every month!" value="<?php echo $current_tagline; ?>" /> 
 		</p>
 
 		<h3><?php _e( 'Location Address', 'firstfriday_spaces_plugin' ); ?></h3>
@@ -101,7 +101,7 @@ function space_build_meta_box( $post ){
 
 		<h3><?php _e( 'Links', 'firstfriday_spaces_plugin' ); ?></h3>
 		<p>
-			Website: <input type="text" name="website" placeholder="Include http://" value="<?php echo $current_website; ?>" />
+			Website: <input type="text" size="40" name="website" placeholder="Include http://" value="<?php echo $current_website; ?>" />
 		</p>
 	</div>
 	<div class="right" style="float: right; width:45%;">
