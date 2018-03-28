@@ -352,14 +352,37 @@ input[type='text'], input[type='email'], input[type='text'] {
   padding: 10px;
   font-size: 21px; }
 
+.filter-cat span {
+  font-weight: 100;
+  margin-left: 10px; }
 .filter-cat button {
-  padding: 6px 23px;
-  background-color: #000000;
-  color: #FFFFFF;
-  border: 0;
-  font-size: 16px;
+  color: #000000;
   text-transform: uppercase;
-  border-radius: 5px; }
+  font-size: 18px;
+  text-decoration: none;
+  text-align: center;
+  background-color: #FFFFFF;
+  padding: 15px 50px;
+  border: none;
+  -webkit-box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.4);
+  border-radius: 30px;
+  margin: 20px 0px;
+  display: inline-block;
+  cursor: pointer;
+  padding: 6px 23px;
+  margin-right: 10px;
+  background-color: #6c2a29;
+  color: #FFFFFF;
+  font-size: 16px; }
+  .filter-cat button:hover {
+    background-color: whitesmoke;
+    -webkit-box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.4);
+            box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.4); }
+  .filter-cat button:active {
+    background-color: #e6e6e6; }
+  .filter-cat button:hover {
+    color: #000000; }
   .filter-cat button.active {
     background-color: #FFFFFF;
     color: #000000; }

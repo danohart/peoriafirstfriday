@@ -1,20 +1,29 @@
 // Navigation Filtering
 
 .filter-cat {
-    button {
-        padding: 6px 23px;
-        background-color: #000000;
-        color: #FFFFFF;
-        border: 0;
-        font-size: 16px;
-        text-transform: uppercase;
-        border-radius: 5px;
+  span {
+    font-weight: 100;
+    margin-left: 10px;
+  }
 
-        &.active {
-            background-color: #FFFFFF;
-            color: #000000;
-        }
+  button {
+    @include button;
+    cursor: pointer;
+    padding: 6px 23px;
+    margin-right: 10px;
+    background-color: #6c2a29;
+    color: #FFFFFF;
+    font-size: 16px;
+
+    &:hover {
+      color: #000000;
     }
+
+    &.active {
+      background-color: #FFFFFF;
+      color: #000000;
+    }
+  }
 }
 
 // Individual cards, single page cards

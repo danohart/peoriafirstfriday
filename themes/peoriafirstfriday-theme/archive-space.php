@@ -2,7 +2,7 @@
 <!-- archive template for Spaces page -->
     <div id="main-content" class="spaces">
     	<div class="filter-cat">
-    		Select: 
+    		<span>SHOW:</span> 
 		    <button class="all active" data-cat="All">All</button>
 		    <button class="Studio" data-cat="Studio">Studio</button>
 		    <button class="Gallery" data-cat="Gallery">Gallery</button>

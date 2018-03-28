@@ -1,6 +1,6 @@
 function filterCategory(category) {         
     // elements to be filtered
-    if(category == 'All'){
+    if(category == 'All') { 
         $('.card').show();
     } else {
         $('.card').hide();

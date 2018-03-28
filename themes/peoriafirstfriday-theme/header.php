@@ -10,7 +10,7 @@
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" /> 
 <?php wp_head(); ?>
 
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Open+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Open+Sans:100,400,700" rel="stylesheet">
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen,projection" />
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/font-awesome.min.css"/>
