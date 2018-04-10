@@ -301,6 +301,13 @@ a.btn {
   background-size: 100%;
   padding: 0px 60px 40px 60px; }
 
+.pre-footer {
+  border-bottom: 1px solid #464646;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 10px 0px 1px 0px;
+  text-transform: uppercase; }
+
 footer {
   background: #212121;
   color: #EDEDED;

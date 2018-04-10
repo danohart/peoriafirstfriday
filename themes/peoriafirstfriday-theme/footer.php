@@ -1,3 +1,13 @@
+<div class="pre-footer">
+  <h4>The Next First Friday is 
+    <?php $today  = new DateTime();
+    $this_months_friday = new DateTime('first friday of this month');
+    $next_months_friday = new DateTime('first friday of next month');
+    echo ($today < $this_months_friday) ? $this_months_friday->format('M j') : $next_months_friday->format('M j'); 
+    ?>
+  </h4>
+</div>
+
 <footer>
   <?php dynamic_sidebar( 'footer' ); ?>
   <div class="powered-by">
