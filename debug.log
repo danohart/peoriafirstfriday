@@ -14728,3 +14728,16 @@
 [30-May-2018 02:16:31 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Users/danielhart/Websites/peoriafirstfriday/wp-includes/update.php on line 155
 [30-May-2018 02:16:31 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Users/danielhart/Websites/peoriafirstfriday/wp-includes/update.php on line 347
 [30-May-2018 02:16:31 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Users/danielhart/Websites/peoriafirstfriday/wp-includes/update.php on line 529
+[30-May-2018 04:37:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function The Next First Friday is() in /Users/danielhart/Websites/peoriafirstfriday/wp-content/themes/peoriafirstfriday-theme/footer.php:7
+Stack trace:
+#0 /Users/danielhart/Websites/peoriafirstfriday/wp-includes/template.php(688): require_once()
+#1 /Users/danielhart/Websites/peoriafirstfriday/wp-includes/template.php(647): load_template('/Users/danielha...', true)
+#2 /Users/danielhart/Websites/peoriafirstfriday/wp-includes/general-template.php(76): locate_template(Array, true)
+#3 /Users/danielhart/Websites/peoriafirstfriday/wp-content/themes/peoriafirstfriday-theme/page.php(18): get_footer()
+#4 /Users/danielhart/Websites/peoriafirstfriday/wp-includes/template-loader.php(74): include('/Users/danielha...')
+#5 /Users/danielhart/Websites/peoriafirstfriday/wp-blog-header.php(19): require_once('/Users/danielha...')
+#6 /Users/danielhart/Websites/peoriafirstfriday/index.php(17): require('/Users/danielha...')
+#7 /Users/danielhart/.composer/vendor/laravel/valet/server.php(147): require in /Users/danielhart/Websites/peoriafirstfriday/wp-content/themes/peoriafirstfriday-theme/footer.php on line 7
+[30-May-2018 04:40:37 UTC] PHP Parse error:  syntax error, unexpected ')' in /Users/danielhart/Websites/peoriafirstfriday/wp-content/themes/peoriafirstfriday-theme/footer.php on line 7
+[30-May-2018 04:41:01 UTC] PHP Parse error:  syntax error, unexpected ')' in /Users/danielhart/Websites/peoriafirstfriday/wp-content/themes/peoriafirstfriday-theme/footer.php on line 7
+[02-Jun-2018 04:46:00 UTC] PHP Parse error:  syntax error, unexpected ';' in /Users/danielhart/Websites/peoriafirstfriday/wp-content/themes/peoriafirstfriday-theme/footer.php on line 7
