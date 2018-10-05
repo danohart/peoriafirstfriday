@@ -1,11 +1,21 @@
 <div class="pre-footer">
   <h4> 
-    <?php 
+   <!--  <?php 
       $today  = new DateTime();
       $this_months_friday = new DateTime('first friday of this month');
       $next_months_friday = new DateTime('first friday of next month');
-      echo 'The Next First Friday is ',( $today < $this_months_friday) ? $this_months_friday->format('M j') : $next_months_friday->format('M j');
-    ?>
+      echo 'The Next First Friday Is ',$this_months_friday->format('M j');
+      if ($today = $this_months_friday) {
+        echo 'Today is First Friday';
+      } elseif ($today < $this_months_friday) {
+        echo 'The Next First Friday Is ',$this_months_friday->format('M j');
+      } else {
+        echo 'The Next First Friday Is ',$next_months_friday->format('M j');
+      }
+       
+      // echo 'The Next First Friday is ',( $today < $this_months_friday) ? $this_months_friday->format('M j') : $next_months_friday->format('M j');
+      
+    ?> -->
 
 
   </h4>
