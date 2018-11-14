@@ -105,6 +105,12 @@ p {
   }
 }
 
+.top {
+  text-align: center;
+  padding: 12px 0px;
+  color: #FFF;
+}
+
 .nf-form-cont input[type="button"] {
   @include button;
 }

@@ -26,6 +26,10 @@
 
 <?php echo '<body class="'.join(' ', get_body_class()).'">'.PHP_EOL; ?>
 
+<div class="top">
+  Note: Some venues do not have events for First Friday in the winter months. Please check with each venue before venturing out
+</div>
+
 <?php if(is_archive()) {?>
 <div id="header" style="background:linear-gradient(rgba(126, 55, 45, .6), rgba(20,20,20, .6)), url(<?php bloginfo('template_url');?>/images/banner.jpg);">
 <?php } else { ?>

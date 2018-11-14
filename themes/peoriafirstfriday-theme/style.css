@@ -127,6 +127,11 @@ p {
   p.center {
     text-align: center !important; }
 
+.top {
+  text-align: center;
+  padding: 12px 0px;
+  color: #FFF; }
+
 .nf-form-cont input[type="button"] {
   color: #000000;
   text-transform: uppercase;
