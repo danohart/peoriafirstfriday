@@ -464,7 +464,10 @@ input[type='text'], input[type='email'], input[type='text'] {
       border-radius: 5px 5px 0px 0px; }
     .card-wrapper .card h2 {
       font-size: 30px;
-      margin-bottom: 0px; }
+      margin-bottom: 0px;
+      -webkit-hyphens: auto;
+          -ms-hyphens: auto;
+              hyphens: auto; }
     .card-wrapper .card h3 {
       font-size: 14px;
       font-weight: bold;
