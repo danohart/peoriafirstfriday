@@ -12,7 +12,7 @@
     padding: 6px 23px;
     margin-right: 10px;
     background-color: #ffffff7a;
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 16px;
 
     &:hover {
@@ -20,7 +20,7 @@
     }
 
     &.active {
-      background-color: #FFFFFF;
+      background-color: #ffffff;
       color: #000000;
     }
   }
@@ -29,13 +29,15 @@
 // Individual cards, single page cards
 
 .card {
-  background: #FFFFFF;
+  background: #ffffff;
   color: #000000;
   margin: 10px 10px;
   border-radius: 5px 5px 0px 0px;
   max-width: 100%;
 
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     padding-top: 0px;
   }
 
@@ -51,48 +53,48 @@
   flex-wrap: wrap;
   flex: 1;
   flex-direction: row;
-  
+
   // Change width for archive page
   .card {
     max-width: 28%;
     &.active {
       @for $i from 1 to 10 {
-  	  &:nth-child(#{$i}) { 
-  	  	animation: staircaseReveal 120ms $i * 0.1s both;
+        &:nth-child(#{$i}) {
+          animation: staircaseReveal 120ms $i * 0.1s both;
+        }
       }
-	  }
-	}
+    }
 
     .featured-image {
-    	img {
-    		width: 100%;
-    		height: auto;
-    		border-radius: 5px 5px 0px 0px;
-    	}
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px 5px 0px 0px;
+      }
     }
 
     .no-image {
-    	img {
-    		width: 100%;
-    		height: auto;
-    		border-radius: 5px 5px 0px 0px;
-    	}
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px 5px 0px 0px;
+      }
     }
 
     h2 {
-    	font-size: 30px;
-    	margin-bottom: 0px;
+      font-size: 30px;
+      margin-bottom: 0px;
     }
 
     h3 {
-    	font-size: 14px;
-    	font-weight: bold;
-    	margin-bottom: 12px;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 12px;
     }
 
     p {
-    	font-size: 17px;
-    	margin: 0px;
+      font-size: 17px;
+      margin: 0px;
     }
   }
 }
@@ -115,7 +117,7 @@
 
   .card-wrapper {
     .card {
-      max-width: 43%;
+      max-width: 100%;
 
       .inside-wrap {
         padding: 15px;

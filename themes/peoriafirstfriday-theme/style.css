@@ -385,7 +385,7 @@ input[type='text'], input[type='email'], input[type='text'] {
   padding: 6px 23px;
   margin-right: 10px;
   background-color: #ffffff7a;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 16px; }
   .filter-cat button:hover {
     background-color: whitesmoke;
@@ -396,16 +396,18 @@ input[type='text'], input[type='email'], input[type='text'] {
   .filter-cat button:hover {
     color: #000000; }
   .filter-cat button.active {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     color: #000000; }
 
 .card {
-  background: #FFFFFF;
+  background: #ffffff;
   color: #000000;
   margin: 10px 10px;
   border-radius: 5px 5px 0px 0px;
   max-width: 100%; }
-  .card h1, .card h2, .card h3 {
+  .card h1,
+  .card h2,
+  .card h3 {
     padding-top: 0px; }
   .card .inside-wrap {
     padding: 25px; }
@@ -483,7 +485,7 @@ input[type='text'], input[type='email'], input[type='text'] {
       margin: 6px 0px; }
 
   .card-wrapper .card {
-    max-width: 43%; }
+    max-width: 100%; }
     .card-wrapper .card .inside-wrap {
       padding: 15px; }
       .card-wrapper .card .inside-wrap p {
