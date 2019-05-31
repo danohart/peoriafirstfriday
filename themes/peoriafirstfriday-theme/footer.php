@@ -1,5 +1,6 @@
 <div class="pre-footer">
-  <h4> 
+  <h4>
+  Download the logo to use on your First Friday promotional material <a class="button" href="http://peoriafirstfriday.com/wp-content/uploads/2019/05/1stFriday-Logo-LetteringWorks-May2019.zip">Download</a></div>
    <!--  <?php 
       $today  = new DateTime();
       $this_months_friday = new DateTime('first friday of this month');
