@@ -1,8 +1,24 @@
 <div class="pre-footer">
   <h4>
-  Download the logo to use on your First Friday promotional material <a class="button" href="http://peoriafirstfriday.com/wp-content/uploads/2019/05/1stFriday-Logo-LetteringWorks-May2019.zip">Download</a>
-  <br/>
-  The Next First Friday is <?php echo date('F d', strtotime("first friday")); ?>
+  Download the logo to use on your First Friday promotional material <a class="button" href="http://peoriafirstfriday.com/wp-content/uploads/2019/05/1stFriday-Logo-LetteringWorks-May2019.zip">Download</a></div>
+   <!--  <?php 
+      $today  = new DateTime();
+      $this_months_friday = new DateTime('first friday of this month');
+      $next_months_friday = new DateTime('first friday of next month');
+      echo 'The Next First Friday Is ',$this_months_friday->format('M j');
+      if ($today = $this_months_friday) {
+        echo 'Today is First Friday';
+      } elseif ($today < $this_months_friday) {
+        echo 'The Next First Friday Is ',$this_months_friday->format('M j');
+      } else {
+        echo 'The Next First Friday Is ',$next_months_friday->format('M j');
+      }
+       
+      // echo 'The Next First Friday is ',( $today < $this_months_friday) ? $this_months_friday->format('M j') : $next_months_friday->format('M j');
+      
+    ?> -->
+
+
   </h4>
 </div>
 
