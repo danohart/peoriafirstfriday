@@ -26,7 +26,7 @@
 
 <?php echo '<body class="'.join(' ', get_body_class()).'">'.PHP_EOL; ?>
 <div class='notice'>
-  <div>Due to the 'stay-at-home' order by the Governor, First Friday events at studios and galleries is not adviced and most, if not all, have been cancelled for this month's First Friday.</div>
+  <div>Due to the 'stay-at-home' order by the Governor, First Friday events at studios and galleries are not adviced and most, if not all, have been cancelled for this month's First Friday.</div>
   <div>However! <strong>It is important to support artists and the arts at this time.</strong> Some of the ways you can support your favorite artists are...
   <ul>
     <li>Like, following, and/or subscribing to your favorites on social media.</li>
