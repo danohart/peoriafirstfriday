@@ -29,8 +29,8 @@
   <div>Due to the 'stay-at-home' order by the Governor, First Friday events at studios and galleries are not advised and most, if not all, have been cancelled for this month's First Friday.</div>
   <div>However! <strong>It is important to support artists and the arts at this time.</strong> Some of the ways you can support your favorite artists are...
   <ul>
-    <li>Like, following, and/or subscribing to your favorites on social media.</li>
-    <li>Leaving a review, comment, and reaching out to artists, thanking them for what they do.</li>
+    <li>Like, follow, and subscribe to your favorites on social media.</li>
+    <li>Leave a review, comment, and reach out to artists, thanking them for what they do.</li>
     <li>And best of all, <strong>BUY ART!</strong> No better way to say "Hey, keep doing what you're doing!" other than buying art from an artist.</li>
   </ul>
   </div>
