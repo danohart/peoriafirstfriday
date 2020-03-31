@@ -33,6 +33,7 @@
     <li>Leaving a review, comment, and reaching out to artists, thanking them for what they do.</li>
     <li>And best of all, <strong>BUY ART!</strong> No better way to say "Hey, keep doing what you're doing!" other than buying art from an artist.</li>
   </ul>
+  </div>
 </div>
 <?php if(is_archive()) {?>
 <div id="header" style="background:linear-gradient(rgba(126, 55, 45, .6), rgba(20,20,20, .6)), url(<?php bloginfo('template_url');?>/images/banner.jpg);">

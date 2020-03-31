@@ -1,9 +1,13 @@
 .notice {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: left;
   padding: 20px;
   font-size: 18px;
   background-color: $background-color;
   color: #ffffff;
+
+  div {
+    padding: 5px 0px;
+  }
 }
