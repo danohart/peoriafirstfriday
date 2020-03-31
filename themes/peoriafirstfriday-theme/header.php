@@ -25,7 +25,15 @@
 </head>
 
 <?php echo '<body class="'.join(' ', get_body_class()).'">'.PHP_EOL; ?>
-
+<div class='notice'>
+  <div>Due to the 'stay-at-home' order by the Governor, First Friday events at studios and galleries is not adviced and most, if not all, have been cancelled for this month's First Friday.</div>
+  <div>However! <strong>It is important to support artists and the arts at this time.</strong> Some of the ways you can support your favorite artists are...
+  <ul>
+    <li>Like, following, and/or subscribing to your favorites on social media.</li>
+    <li>Leaving a review, comment, and reaching out to artists, thanking them for what they do.</li>
+    <li>And best of all, <strong>BUY ART!</strong> No better way to say "Hey, keep doing what you're doing!" other than buying art from an artist.</li>
+  </ul>
+</div>
 <?php if(is_archive()) {?>
 <div id="header" style="background:linear-gradient(rgba(126, 55, 45, .6), rgba(20,20,20, .6)), url(<?php bloginfo('template_url');?>/images/banner.jpg);">
 <?php } else { ?>
