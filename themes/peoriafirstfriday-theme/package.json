@@ -26,6 +26,6 @@
   "dependencies": {
     "autoprefixer": "^7.1.4",
     "grunt-clearcache": "0.0.4",
-    "node-sass": "^4.5.3"
+    "node-sass": "^7.0.0"
   }
 }
